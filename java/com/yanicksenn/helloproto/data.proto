@@ -1,0 +1,31 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.yanicksenn.helloproto.proto";
+option objc_class_prefix = "HLW";
+
+package helloproto;
+
+message Payload {
+    // Name of the payload.
+    string name = 1;
+
+    // Timestamp when the payload was created.
+    int64 timestamp = 2;
+
+    // Data that will be tranferred with the proto.
+    string data = 3;
+
+    // Additional flags added to the payload.
+    repeated Flag flags = 4;
+
+    // A flag to enrich a payload.
+    message Flag {
+
+        // A key to identify the flag.
+        string key = 1;
+
+        // Optional value of the flag.
+        optional string value = 2;
+    }
+}

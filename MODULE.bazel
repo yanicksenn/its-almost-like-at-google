@@ -1,11 +1,13 @@
 "Bazel dependencies"
 
 bazel_dep(name = "rules_jvm_external", version = "5.3")
+bazel_dep(name = "rules_proto", version = "6.0.0")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
         "junit:junit:4.12",
+        "com.google.guava:guava:31.1-jre"
     ],
     fetch_sources = True,
     repositories = [
