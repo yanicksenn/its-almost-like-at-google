@@ -5,7 +5,7 @@ java_test(
     srcs = glob(["*.java"]),
     test_class = "com.yanicksenn.flags.FlagsTest",
     deps = [
-        "//java/com/yanicksenn/flags:flags",
+        "//java/com/yanicksenn/flags",
         "@maven//:junit_junit"
     ]
 )

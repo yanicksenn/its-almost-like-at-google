@@ -1,0 +1,23 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.yanicksenn.helloguice.proto";
+
+package helloguice;
+
+message Person {
+    Id id = 1;
+    string firstname = 2;
+    string lastname = 3;
+    Date birthday = 4;
+
+    message Id {
+        string id = 1;
+    }
+}
+
+message Date {
+    int32 year = 1;
+    int32 month = 2;
+    int32 day = 3;
+}

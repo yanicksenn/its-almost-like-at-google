@@ -1,6 +1,6 @@
 {
   "lockFileVersion": 6,
-  "moduleFileHash": "aa3cdc3c87673b1721f1d8c45bebbad440a4f9500dc2588e9dc760636dc507ed",
+  "moduleFileHash": "2967dd126b3cce024fdd3421e6b179540a640bdcbba366ba0283da285d3dfa3e",
   "flags": {
     "cmdRegistries": [
       "https://bcr.bazel.build/"
@@ -43,12 +43,17 @@
               "attributeValues": {
                 "artifacts": [
                   "junit:junit:4.12",
-                  "com.google.guava:guava:31.1-jre"
+                  "com.google.truth:truth:1.4.2",
+                  "com.google.guava:guava:31.1-jre",
+                  "com.google.protobuf:protobuf-java:4.27.0",
+                  "com.google.inject:guice:7.0.0"
                 ],
                 "fetch_sources": true,
                 "repositories": [
                   "http://uk.maven.org/maven2",
-                  "https://jcenter.bintray.com/"
+                  "https://jcenter.bintray.com/",
+                  "https://maven.google.com",
+                  "https://repo1.maven.org/maven2"
                 ]
               },
               "devDependency": false,
@@ -2584,11 +2589,15 @@
               "repositories": [
                 "{ \"repo_url\": \"http://uk.maven.org/maven2\" }",
                 "{ \"repo_url\": \"https://jcenter.bintray.com/\" }",
+                "{ \"repo_url\": \"https://maven.google.com\" }",
                 "{ \"repo_url\": \"https://repo1.maven.org/maven2\" }"
               ],
               "artifacts": [
                 "{ \"group\": \"junit\", \"artifact\": \"junit\", \"version\": \"4.12\" }",
+                "{ \"group\": \"com.google.truth\", \"artifact\": \"truth\", \"version\": \"1.4.2\" }",
                 "{ \"group\": \"com.google.guava\", \"artifact\": \"guava\", \"version\": \"31.1-jre\" }",
+                "{ \"group\": \"com.google.protobuf\", \"artifact\": \"protobuf-java\", \"version\": \"4.27.0\" }",
+                "{ \"group\": \"com.google.inject\", \"artifact\": \"guice\", \"version\": \"7.0.0\" }",
                 "{ \"group\": \"com.google.code.findbugs\", \"artifact\": \"jsr305\", \"version\": \"3.0.2\" }",
                 "{ \"group\": \"com.google.code.gson\", \"artifact\": \"gson\", \"version\": \"2.8.9\" }",
                 "{ \"group\": \"com.google.errorprone\", \"artifact\": \"error_prone_annotations\", \"version\": \"2.3.2\" }",

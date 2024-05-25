@@ -26,6 +26,11 @@ bazel run //java/com/yanicksenn/helloworld -- --name=Yanick
 bazel run //java/com/yanicksenn/helloproto
 ```
 
+### Hello, Guice!
+```bash
+bazel run //java/com/yanicksenn/helloguice
+```
+
 ## Libraries
 
 ### Flags

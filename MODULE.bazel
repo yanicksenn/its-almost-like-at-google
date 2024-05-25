@@ -7,12 +7,17 @@ maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
     artifacts = [
         "junit:junit:4.12",
-        "com.google.guava:guava:31.1-jre"
+        "com.google.truth:truth:1.4.2",
+        "com.google.guava:guava:31.1-jre",
+        "com.google.protobuf:protobuf-java:4.27.0",
+        "com.google.inject:guice:7.0.0"
     ],
     fetch_sources = True,
     repositories = [
         "http://uk.maven.org/maven2",
         "https://jcenter.bintray.com/",
+        "https://maven.google.com",
+        "https://repo1.maven.org/maven2",
     ],
 )
 use_repo(maven, "maven")
