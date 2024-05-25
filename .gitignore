@@ -1,0 +1,11 @@
+# MacOSx
+.DS_Store
+
+# Bazel
+bazel-*
+
+# Visual Studio Code
+.vscode
+
+# Mercurial
+.hg

@@ -1,0 +1,12 @@
+# MacOSx
+.DS_Store
+
+# Bazel
+bazel-*
+
+# Visual Studio Code
+.vscode
+
+# Git
+.git
+.gitignore
