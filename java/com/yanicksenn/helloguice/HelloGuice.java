@@ -4,9 +4,10 @@ import com.google.inject.Inject;
 import com.yanicksenn.helloguice.proto.Date;
 import com.yanicksenn.helloguice.proto.Person;
 import com.yanicksenn.helloguice.proto.Person.Id;
+import java.lang.Runnable;
 import java.util.UUID;
 
-public class HelloGuice {
+public final class HelloGuice implements Runnable {
     private final PersonStorage personStorage;
 
     @Inject
@@ -14,6 +15,7 @@ public class HelloGuice {
         this.personStorage = personStorage;
     }
 
+    @Override
     public void run() {
         Person.Id personId = Person.Id.newBuilder().setId(createUUID()).build();
         personStorage.write(

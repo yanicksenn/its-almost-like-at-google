@@ -6,6 +6,8 @@ import java.util.HashMap;
 import java.util.List;
 
 public class ProductionStorage implements Storage {
+
+    // Pretend this is writing to a database / filesystem / etc.
     private final HashMap<Message, Message> storage = new HashMap<>();
 
     @Override
