@@ -4,8 +4,8 @@ A mono repo consisting of mainly Google's open source tools, libraries and frame
 
 - [Bazel](https://bazel.build/)
 - [Protobuf](https://protobuf.dev/)
-- [gRPC](https://grpc.io/)
 - [Guice](https://github.com/google/guice)
+- [gRPC](https://grpc.io/)
 - [Mercurial](https://www.mercurial-scm.org/)
 
 ## Why?
