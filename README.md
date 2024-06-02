@@ -34,10 +34,10 @@ bazel run //java/com/yanicksenn/helloguice
 ### Hello, gRPC!
 ```bash
 # Server
-blaze run //java/com/yanicksenn/hellogrpc:hello_service_server
+bazel run //java/com/yanicksenn/hellogrpc:hello_service_server
 
 # Client
-blaze run //java/com/yanicksenn/hellogrpc:hello_service_client
+bazel run //java/com/yanicksenn/hellogrpc:hello_service_client
 ```
 
 ## Libraries
