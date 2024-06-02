@@ -8,16 +8,11 @@ import java.util.Optional;
 
 /** Utility class for managing flags. */
 public final class Flags {
-
   private static final HashMap<String, String> parsedArgs = new HashMap<>();
-  private static boolean initialized = false;
 
   /** Initializes and caches the given arguments. */
   public static void init(String[] args) {
-    if (initialized) {
-      throw new AssertionError("Flags already initialized");
-    }
-
+    parsedArgs.clear();
     for (String arg : args) {
       if (arg.startsWith("--")) {
         int separatorIndex = arg.indexOf("=");
@@ -27,9 +22,8 @@ public final class Flags {
         parsedArgs.put(argName, argValue);
       }
     }
-
-    initialized = true;
   }
+  
 
   /**
    * Returns the value to the given argument name. Returns empty if no argument with the given name
@@ -84,9 +78,5 @@ public final class Flags {
   public static boolean hasValue(String name) {
     Objects.requireNonNull(name);
     return isSet(name) && parsedArgs.get(name) != null;
-  }
-
-  private Flags() {
-    throw new AssertionError();
   }
 }

@@ -4,13 +4,9 @@ import static com.google.common.truth.Truth.assertThat;
 
 import com.yanicksenn.flags.Flags;
 import org.junit.Test;
+import java.util.List;
 
 public class FlagsTest {
-
-    @Test
-    public void init_whenCalledTheFirstTime_doesNotThrow() {
-        init("");
-    }
 
     @Test
     public void get_whenUnset_returnsEmpty() {
