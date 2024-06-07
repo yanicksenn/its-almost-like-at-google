@@ -55,5 +55,11 @@ bazel run //python/com/yanicksenn/templating
 A very simple command-line flag parser.
 
 ```
+# Java
 //java/com/yanicksenn/flags
+```
+
+```
+# Python
+//python/com/yanicksenn/flags
 ```
