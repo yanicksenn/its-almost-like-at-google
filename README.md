@@ -40,6 +40,14 @@ bazel run //java/com/yanicksenn/hellogrpc:hello_service_server
 bazel run //java/com/yanicksenn/hellogrpc:hello_service_client
 ```
 
+### Templating
+```bash
+bazel run //python/com/yanicksenn/templating
+```
+
+**_NOTE:_** This binary does not do anything at this point. However, I expect to finish the templating engine at some point in the future.
+
+
 ## Libraries
 
 ### Flags
