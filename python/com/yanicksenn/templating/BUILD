@@ -10,6 +10,9 @@ py_library(
 py_binary(
     name = "templating",
     srcs = ["templating.py"],
-    deps = [":templating-engine"],
+    deps = [
+        ":templating-engine", 
+        "//python/com/yanicksenn/flags"
+    ],
     main = "templating.py"
 )
