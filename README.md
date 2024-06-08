@@ -6,7 +6,6 @@ A mono repo consisting of mainly Google's open source tools, libraries and frame
 - [Protobuf](https://protobuf.dev/)
 - [Guice](https://github.com/google/guice)
 - [gRPC](https://grpc.io/)
-- [Mercurial](https://www.mercurial-scm.org/)
 
 ## Why?
 
