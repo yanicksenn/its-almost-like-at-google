@@ -9,7 +9,7 @@ A mono repo consisting of mainly Google's open source tools, libraries and frame
 
 ## Why?
 
-Because somehow I really enjoy that tech stack. It's fundamentally different to what most common software engineering companies use.
+Because somehow I really enjoy that tech stack. It's quite different to what most common software engineering companies use.
 
 ## Binaries
 
