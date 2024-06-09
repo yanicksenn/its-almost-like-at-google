@@ -4,15 +4,18 @@ package(default_visibility = ["//visibility:public"])
 
 py_library(
     name = "templating-engine",
-    srcs = ["templating_engine.py"]
+    srcs = [
+        "rules.py",
+        "templating_engine.py",
+    ],
 )
 
 py_binary(
     name = "templating",
     srcs = ["templating.py"],
+    main = "templating.py",
     deps = [
-        ":templating-engine", 
-        "//python/com/yanicksenn/flags"
+        ":templating-engine",
+        "//python/com/yanicksenn/flags",
     ],
-    main = "templating.py"
 )
