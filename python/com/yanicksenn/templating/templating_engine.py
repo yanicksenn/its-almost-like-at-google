@@ -2,13 +2,19 @@ from dataclasses import dataclass
 from pathlib import Path
 import re
 
-from python.com.yanicksenn.templating.rules import Rule
+from python.com.yanicksenn.templating.rules import AbstractRule
 from python.com.yanicksenn.templating.rules import RegexRule
+from python.com.yanicksenn.templating.rules import RegexRuleParser
 from python.com.yanicksenn.templating.rules import AlphabeticRule
+from python.com.yanicksenn.templating.rules import AlphabeticRuleParser
 from python.com.yanicksenn.templating.rules import AlphanumericRule
+from python.com.yanicksenn.templating.rules import AlphanumericRuleParser
 from python.com.yanicksenn.templating.rules import NumericRule
-from python.com.yanicksenn.templating.rules import MinLength
-from python.com.yanicksenn.templating.rules import MaxLength
+from python.com.yanicksenn.templating.rules import NumericRuleParser
+from python.com.yanicksenn.templating.rules import MinLengthRule
+from python.com.yanicksenn.templating.rules import MinLengthRuleParser
+from python.com.yanicksenn.templating.rules import MaxLengthRule
+from python.com.yanicksenn.templating.rules import MaxLengthRuleParser
 
 class TemplatePreconditionException(Exception):
     def __init__(self, message):
@@ -18,7 +24,16 @@ class TemplatePreconditionException(Exception):
 class RuleDefinition:
     key: str
     default: str | None
-    rules: list[Rule] | None
+    rules: list[AbstractRule] | None
+
+__rule_parsers = [
+    RegexRuleParser(),
+    AlphanumericRuleParser(), 
+    AlphabeticRuleParser(), 
+    NumericRuleParser(), 
+    MinLengthRuleParser(), 
+    MaxLengthRuleParser()
+]
 
 def __validate_template_path(template_path_raw: str) -> Path:
     try:
@@ -38,56 +53,24 @@ def __validate_target_path(target_path_raw: str) -> Path:
     except FileNotFoundError:
         raise TemplatePreconditionException(f"target {target_path_raw} cannot be resolved")
 
-def __parse_rule_definition_rules(rules_raw: str | None) -> list[Rule]:
+def __parse_rule_definition_rules(rules_raw: str | None) -> list[AbstractRule]:
     if not rules_raw:
         return []
     
+    rule_parsers_by_name = { x.rule_name: x for x in __rule_parsers }
+
     rules = []
     rules_pattern = re.compile(r'\s*([a-zA-Z0-9_]+(\([^)]+\))?)\s*,?', flags = re.MULTILINE)
     rule_pattern = re.compile(r'([a-zA-Z0-9_]+)(\((.+)\))?')
     for rule_raw in re.findall(rules_pattern, rules_raw):
         rule = re.match(rule_pattern, rule_raw[0].strip()).groups()
         rule_name = rule[0]
-
-        if rule_name == 'REGEX':
-            if rule[2] == None:
-                raise TemplatePreconditionException(f"rule {rule_name} is missing it's parameters")
-            rules.append(RegexRule(rule[2]))
-            
-        elif rule_name == 'ALPHANUMERIC':
-            if rule[2] != None:
-                raise TemplatePreconditionException(f"rule {rule_name} is does not accept any parameter")
-            rules.append(AlphanumericRule())
-            
-        elif rule_name == 'ALPHABETIC':
-            if rule[2] != None:
-                raise TemplatePreconditionException(f"rule {rule_name} is does not accept any parameter")
-            rules.append(AlphabeticRule())
-            
-        elif rule_name == 'NUMERIC':
-            if rule[2] != None:
-                raise TemplatePreconditionException(f"rule {rule_name} is does not accept any parameter")
-            rules.append(NumericRule())
-            
-        elif rule_name == 'MIN_LENGTH':
-            rule_value = rule[2]
-            if rule_value == None:
-                raise TemplatePreconditionException(f"rule {rule_name} is missing it's parameters")
-            try:
-                rules.append(MinLength(int(rule_value)))
-            except ValueError:
-                raise TemplatePreconditionException(f"param {rule_value} for rule {rule_name} cannot be parsed to an int")
-            
-        elif rule_name == 'MAX_LENGTH':
-            rule_value = rule[2]
-            if rule_value == None:
-                raise TemplatePreconditionException(f"rule {rule_name} is missing it's parameters")
-            try:
-                rules.append(MaxLength(int(rule_value)))
-            except ValueError:
-                raise TemplatePreconditionException(f"param {rule_value} for rule {rule_name} cannot be parsed to an int")
-        else:
+        rule_parameter = rule[2]
+        rule_parser = rule_parsers_by_name.get(rule_name, None)
+        if not rule_parser:
             raise TemplatePreconditionException(f"rule {rule_name} is unknown")
+
+        rules.append(rule_parser.parse(rule_parameter))
 
     return rules
 
@@ -96,6 +79,29 @@ def __parse_rule_definition(key_raw: str, default_raw: str | None, rules_raw: st
         (key_raw or "").strip(), 
         (default_raw or "").strip(), 
         __parse_rule_definition_rules(rules_raw))
+
+def __build_input_message(rule_definition: RuleDefinition) -> str:
+    if len(rule_definition.default) == 0:
+        return f'{rule_definition.key}: '
+    return f'{rule_definition.key} (default = {rule_definition.default}): '
+
+def __request_user_input_until_valid(rule_definition):
+    input_raw: str | None = None
+    while True:
+        input_raw = input(__build_input_message(rule_definition))
+        input_raw = input_raw if len(input_raw) != 0 else rule_definition.default
+            
+        conforms = True
+        for rule in rule_definition.rules:
+            rule_violation = rule.validate(input_raw)
+            if rule_violation:
+                print(f'> {rule_violation.message}')
+                print()
+                conforms = False
+            
+        if conforms:
+            break
+    return input_raw
 
 def run(template_path_raw: str, target_path_raw: str):
     template_path = __validate_template_path(template_path_raw)
@@ -116,28 +122,13 @@ def run(template_path_raw: str, target_path_raw: str):
     template_content = template_path.read_text()
     fixed_content = template_content
     for key in rule_definitions:
-        rule_definition = rule_definitions[key]
-        
-        input_raw: str | None = None
-        while True:
-            message = f'{rule_definition.key}: ' if len(rule_definition.default) == 0 else f'{rule_definition.key} ({rule_definition.default}): '
-            input_raw = input(message)
-            input_raw = input_raw if len(input_raw) != 0 else rule_definition.default
-            
-            conforms = True
-            for rule in rule_definition.rules:
-                if not rule.is_valid(input_raw):
-                    print(f"Input failed {type(rule)} check")
-                    conforms = False
-            
-            if conforms:
-                break
-
-        fixed_content = fixed_content.replace(key, input_raw)
+        key_replacement = __request_user_input_until_valid(rule_definitions[key])
+        fixed_content = fixed_content.replace(key, key_replacement)
     
     print()
     print("=== PREVIEW BEING")
     print(fixed_content)
     print("=== PREVIEW END")
+    print()
 
     
