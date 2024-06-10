@@ -6,7 +6,7 @@ Simple templating engine with small set of replacement rules.
 
 ```bash
 # Interactive mode
-blaze run //python/com/yanicksenn/templating \
+bazel run //python/com/yanicksenn/templating \
     --template_path=/path/to/template/file \
     --target_path=/path/to/output/file \
     --interactive
@@ -14,7 +14,7 @@ blaze run //python/com/yanicksenn/templating \
 
 ```bash
 # Silent mode
-blaze run //python/com/yanicksenn/templating \
+bazel run //python/com/yanicksenn/templating \
     --template_path=/path/to/template/file \
     --target_path=/path/to/output/file \
     --__ID="123" \
