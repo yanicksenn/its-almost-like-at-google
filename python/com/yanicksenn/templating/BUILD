@@ -6,9 +6,11 @@ py_library(
     name = "templating-engine",
     srcs = [
         "rules.py",
-        "utils.py",
         "templating_engine.py",
     ],
+    deps = [
+        "//python/com/yanicksenn/templating/rules"
+    ]
 )
 
 py_binary(

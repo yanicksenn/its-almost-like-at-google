@@ -2,19 +2,14 @@ from dataclasses import dataclass
 from pathlib import Path
 import re
 
-from python.com.yanicksenn.templating.rules import AbstractRule
-from python.com.yanicksenn.templating.rules import RegexRule
-from python.com.yanicksenn.templating.rules import RegexRuleParser
-from python.com.yanicksenn.templating.rules import AlphabeticRule
-from python.com.yanicksenn.templating.rules import AlphabeticRuleParser
-from python.com.yanicksenn.templating.rules import AlphanumericRule
-from python.com.yanicksenn.templating.rules import AlphanumericRuleParser
-from python.com.yanicksenn.templating.rules import NumericRule
-from python.com.yanicksenn.templating.rules import NumericRuleParser
-from python.com.yanicksenn.templating.rules import MinLengthRule
-from python.com.yanicksenn.templating.rules import MinLengthRuleParser
-from python.com.yanicksenn.templating.rules import MaxLengthRule
-from python.com.yanicksenn.templating.rules import MaxLengthRuleParser
+from python.com.yanicksenn.templating.rules.abstract_rule import AbstractParser
+from python.com.yanicksenn.templating.rules.abstract_rule import AbstractRule
+import python.com.yanicksenn.templating.rules.regex_rule as regex
+import python.com.yanicksenn.templating.rules.alphabetic_rule as alphabetic
+import python.com.yanicksenn.templating.rules.alphanumeric_rule as alphanumeric
+import python.com.yanicksenn.templating.rules.numeric_rule as numeric
+import python.com.yanicksenn.templating.rules.min_length_rule as min_length
+import python.com.yanicksenn.templating.rules.max_length_rule as max_length
 
 class TemplatePreconditionException(Exception):
     def __init__(self, message):
@@ -26,13 +21,13 @@ class RuleDefinition:
     default: str | None
     rules: list[AbstractRule] | None
 
-__rule_parsers = [
-    RegexRuleParser(),
-    AlphanumericRuleParser(), 
-    AlphabeticRuleParser(), 
-    NumericRuleParser(), 
-    MinLengthRuleParser(), 
-    MaxLengthRuleParser()
+__rule_parsers: list[AbstractParser] = [
+    regex.Parser(),
+    alphanumeric.Parser(), 
+    alphabetic.Parser(), 
+    numeric.Parser(),
+    min_length.Parser(), 
+    max_length.Parser()
 ]
 
 def __validate_template_path(template_path_raw: str) -> Path:
@@ -96,11 +91,12 @@ def __request_user_input_until_valid(rule_definition):
             rule_violation = rule.validate(input_raw)
             if rule_violation:
                 print(f'> {rule_violation.message}')
-                print()
                 conforms = False
+        print()
             
         if conforms:
             break
+
     return input_raw
 
 def run(template_path_raw: str, target_path_raw: str):
