@@ -44,9 +44,10 @@ def __validate_rules_path(rules_path_raw: str) -> Path:
 
 def __validate_target_path(target_path_raw: str) -> Path:
     try:
-        return Path(target_path_raw).resolve(strict=True)
+        Path(target_path_raw).resolve(strict=True)
+        raise TemplatePreconditionException(f"target {target_path_raw} already exists")
     except FileNotFoundError:
-        raise TemplatePreconditionException(f"target {target_path_raw} cannot be resolved")
+        return Path(target_path_raw)
 
 def __parse_rule_definition_rules(rules_raw: str | None) -> list[AbstractRule]:
     if not rules_raw:
@@ -80,7 +81,7 @@ def __build_input_message(rule_definition: RuleDefinition) -> str:
         return f'{rule_definition.key}: '
     return f'{rule_definition.key} (default = {rule_definition.default}): '
 
-def __request_user_input_until_valid(rule_definition):
+def __get_replacement_from_user_input_until_valid(rule_definition: RuleDefinition) -> str:
     input_raw: str | None = None
     while True:
         input_raw = input(__build_input_message(rule_definition))
@@ -88,18 +89,30 @@ def __request_user_input_until_valid(rule_definition):
             
         conforms = True
         for rule in rule_definition.rules:
-            rule_violation = rule.validate(input_raw)
+            rule_violation = rule.validate(rule_definition.key, input_raw)
             if rule_violation:
                 print(f'> {rule_violation.message}')
                 conforms = False
-        print()
             
         if conforms:
             break
+        else:
+            print()
 
     return input_raw
 
-def run(template_path_raw: str, target_path_raw: str):
+def __get_replacement_from_flags(rule_definition: RuleDefinition, custom_flags: dict[str, str]) -> str:
+    flag_name = rule_definition.key
+    flag_value = custom_flags[flag_name] if flag_name in custom_flags else rule_definition.default
+
+    for rule in rule_definition.rules:
+        rule_violation = rule.validate(rule_definition.key, flag_value)
+        if rule_violation:
+            raise TemplatePreconditionException(rule_violation.message)
+
+    return flag_value
+
+def run(template_path_raw: str, target_path_raw: str, interactive: bool, custom_flags: dict[str, str]):
     template_path = __validate_template_path(template_path_raw)
     rules_path = __validate_rules_path(template_path_raw + '.rules')
     target_path = __validate_target_path(target_path_raw)
@@ -118,13 +131,14 @@ def run(template_path_raw: str, target_path_raw: str):
     template_content = template_path.read_text()
     fixed_content = template_content
     for key in rule_definitions:
-        key_replacement = __request_user_input_until_valid(rule_definitions[key])
+        key_replacement = None
+        if interactive:
+            key_replacement = __get_replacement_from_user_input_until_valid(rule_definitions[key])
+        else:
+            key_replacement = __get_replacement_from_flags(rule_definitions[key], custom_flags)
+    
         fixed_content = fixed_content.replace(key, key_replacement)
     
-    print()
-    print("=== PREVIEW BEING")
-    print(fixed_content)
-    print("=== PREVIEW END")
-    print()
+    target_path.write_text(fixed_content)
 
     

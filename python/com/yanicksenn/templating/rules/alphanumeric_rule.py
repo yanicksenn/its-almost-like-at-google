@@ -5,8 +5,8 @@ class Rule(regex.Rule):
     def __init__(self):
         super().__init__(r'[a-zA-Z0-9]+')
 
-    def build_violation_message(self, value: str) -> str:
-        return "value is not alphanumeric"
+    def build_violation_message(self, key: str, value: str) -> str:
+        return f"{key} is not alphanumeric"
 
 class Parser(NoArgumentRuleParser):
     def __init__(self):

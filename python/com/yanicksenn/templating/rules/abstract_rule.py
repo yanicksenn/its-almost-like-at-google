@@ -12,11 +12,11 @@ class AbstractRule:
     def is_valid(self, value: str) -> bool:
         raise NotImplementedError()
     
-    def build_violation_message(self, value: str) -> str:
+    def build_violation_message(self, key: str, value: str) -> str:
         raise NotImplementedError()
     
-    def validate(self, value: str) -> RuleViolation | None:
-        return None if self.is_valid(value) else RuleViolation(self.build_violation_message(value))
+    def validate(self, key: str, value: str) -> RuleViolation | None:
+        return None if self.is_valid(value) else RuleViolation(self.build_violation_message(key, value))
 
 class AbstractParser():
     rule_name: str

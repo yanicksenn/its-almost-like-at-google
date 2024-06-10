@@ -5,8 +5,8 @@ class Rule(regex.Rule):
     def __init__(self):
         super().__init__(r'[a-zA-Z]+')
     
-    def build_violation_message(self, value: str) -> str:
-        return "value is not alphabetic"
+    def build_violation_message(self, key: str, value: str) -> str:
+        return f"{key} is not alphabetic"
 
 class Parser(NoArgumentRuleParser):
     def __init__(self):

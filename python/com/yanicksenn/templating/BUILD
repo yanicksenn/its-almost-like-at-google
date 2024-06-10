@@ -5,11 +5,10 @@ package(default_visibility = ["//visibility:public"])
 py_library(
     name = "templating-engine",
     srcs = [
-        "rules.py",
         "templating_engine.py",
     ],
     deps = [
-        "//python/com/yanicksenn/templating/rules"
+        "//python/com/yanicksenn/templating/rules",
     ]
 )
 

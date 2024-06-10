@@ -34,3 +34,6 @@ def is_set(name: str):
 
 def has_value(name: str):
     return is_set(name) and __parsed_args[name] != None
+
+def all_flags() -> dict[str, str]:
+    return __parsed_args.copy()

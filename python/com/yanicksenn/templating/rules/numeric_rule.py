@@ -9,8 +9,8 @@ class Rule(AbstractRule):
         except ValueError:
             return False
     
-    def build_violation_message(self, value: str) -> str:
-        return "value is not numeric"
+    def build_violation_message(self, key: str, value: str) -> str:
+        return f"{key} is not numeric"
     
 class Parser(NoArgumentRuleParser):
     def __init__(self):

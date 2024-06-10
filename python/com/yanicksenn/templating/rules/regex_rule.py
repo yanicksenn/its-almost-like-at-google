@@ -12,8 +12,8 @@ class Rule(AbstractRule):
     def is_valid(self, value: str) -> bool:
         return re.match(self.pattern, value)
     
-    def build_violation_message(self, value: str) -> str:
-        return f"value does not match the pattern {self.pattern}"
+    def build_violation_message(self, key: str, value: str) -> str:
+        return f"{key} does not match the pattern {self.pattern}"
 
 class Parser(AnyArgumentRuleParser):
     def __init__(self):

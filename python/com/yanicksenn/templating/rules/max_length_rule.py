@@ -12,8 +12,8 @@ class Rule(AbstractRule):
     def is_valid(self, value: str) -> bool:
         return len(value) <= self.length
     
-    def build_violation_message(self, value: str) -> str:
-        return f"value length must be equal or less than {self.length} but was {len(value)}"
+    def build_violation_message(self, key: str, value: str) -> str:
+        return f"{key} length must be equal or less than {self.length} but was {len(value)}"
 
 class Parser(IntArgumentRuleParser):
     def __init__(self):
