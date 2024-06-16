@@ -11,6 +11,15 @@ A mono repo consisting of mainly Google's open source tools, libraries and frame
 
 Because somehow I really enjoy that tech stack. It's quite different to what most common software engineering companies use.
 
+## Usage
+
+Add the following lines to your preferred shell .rc file:
+
+```bash
+source /Users/yanicksenn/Documents/Projects/bazel/source_me.sh
+relink
+```
+
 ## Binaries
 
 List of binaries present in this mono repo.

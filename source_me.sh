@@ -1,6 +1,6 @@
 #!/usr/bin/env bash
 
-# Source this file to your shell and call `relink`
+# Source this file to your shell and call `relink`.
 
 # Please don't hate me.
 alias blaze="bazel"
