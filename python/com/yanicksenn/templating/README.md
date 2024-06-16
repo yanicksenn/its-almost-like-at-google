@@ -85,6 +85,7 @@ AnyIdentifiableString [ MAX_LENGTH(1024) ];
 
 ## Todos
 
+- Add tests.
 - Replace `target` file with `output` file.
 - Get rid of hacks and code smells.
 - Parse the rules file sequentially and not by using regex.
