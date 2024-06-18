@@ -8,6 +8,14 @@ __bazel_workspace_check() {
     return 0
 }
 
+# See /scripts/bash/search/README.md
+search_todos() {
+    if ! __bazel_workspace_check; then
+        return 1
+    fi
+    bazel run //scripts/bash/search:search-todos -- $(bazel info workspace) $@
+}
+
 # See /scripts/bash/update_license/README.md
 update_license() {
     if ! __bazel_workspace_check; then

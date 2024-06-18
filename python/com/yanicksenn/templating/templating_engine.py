@@ -112,6 +112,7 @@ def __get_replacement_from_flags(rule_definition: RuleDefinition, custom_flags: 
 
     return flag_value
 
+# TODO - yanicksenn: Wrap parameters into a wrapper class.
 def run(template_path_raw: str, target_path_raw: str, interactive: bool, custom_flags: dict[str, str]):
     template_path = __validate_template_path(template_path_raw)
     rules_path = __validate_rules_path(template_path_raw + '.rules')

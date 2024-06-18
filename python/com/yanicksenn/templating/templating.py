@@ -14,6 +14,7 @@ def main():
     if target_path is None: 
         raise AssertionError("target must be set")
     
+    # TODO - anyone: Ensure --interactive=true also enables the interactive mode.
     interactive = flags.is_set("interactive") and not flags.has_value("interactive")
 
     known_flag_keys = ["template_path", "target_path", "interactive"]
