@@ -54,6 +54,11 @@ Simple templating engine with small set of replacement rules.
 
 See [docs](/python/com/yanicksenn/templating/README.md).
 
+### Search TODOs
+
+Recursively finds all TODOs inside all files of a directory.
+
+See [docs](/python/com/yanicksenn/search/README.md).
 
 ## Libraries
 
