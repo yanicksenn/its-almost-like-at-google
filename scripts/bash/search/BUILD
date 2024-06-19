@@ -4,5 +4,7 @@ sh_binary(
     data = [
         "//python/com/yanicksenn/search:search-todos",
     ],
-    deps = ["@bazel_tools//tools/bash/runfiles"],
+    deps = [
+        "@bazel_tools//tools/bash/runfiles",
+    ],
 )

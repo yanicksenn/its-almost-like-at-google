@@ -7,11 +7,11 @@ alias blaze="bazel"
 
 __bazel_root_check() {
     if [ -z "$__BAZEL_ROOT" ]; then
-        echo "ERROR: __BAZEL_ROOT must be set."
+		echo >&2 -e "\e[31mERROR: __BAZEL_ROOT must be set.\e[0m"
         return 1
     fi
 	if [ ! -f "$__BAZEL_ROOT/WORKSPACE" ]; then
-        echo "ERROR: __BAZEL_ROOT must point to the root of a bazel workspace."
+		echo >&2 -e "\e[31mERROR: __BAZEL_ROOT must point to the root of a bazel workspace.\e[0m"
         return 2
 	fi
     return 0
@@ -26,14 +26,14 @@ cdws() {
 relink_bash() {
 	__bazel_root_check
 
-	echo "INFO: Relinking bash scripts ..."
+	echo -e "\e[32mINFO: Relinking bash scripts ...\e[0m"
 	source "$__BAZEL_ROOT/scripts/bash/_scripts.sh"
 }
 
 relink() {
 	__bazel_root_check
 
-	echo "INFO: Relinking scripts ..."
+	echo -e "\e[32mINFO: Relinking scripts ...\e[0m"
 	relink_bash
 }
 

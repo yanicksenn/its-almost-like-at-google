@@ -17,16 +17,11 @@ source "${RUNFILES_DIR:-/dev/null}/$f" 2>/dev/null || \
   { echo>&2 "ERROR: cannot find $f"; exit 1; }; f=; set -e
 # --- end runfiles.bash initialization v3 ---
 
-search_todos="$(rlocation __main__/python/com/yanicksenn/search/search-todos)"
-if [[ ! -f "${search_todos:-}" ]]; then
-  echo >&2 "ERROR: cannot find search-todos binary path"
+search_todos="$(rlocation __main__/python/com/yanicksenn/search/search-todoos)"
+if [ ! -f "$search_todos" ]; then
+  echo >&2 "ERROR: Cannot find search-todos binary path."
   exit 1
 fi
 
-root_dir=$1
-shift
-
-$search_todos -- \
-    --root_dir=$root_dir \
-    $@
+$search_todos -- $@
 
