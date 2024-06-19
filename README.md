@@ -16,7 +16,9 @@ Because somehow I really enjoy that tech stack. It's quite different to what mos
 Add the following lines to your preferred shell .rc file:
 
 ```bash
-source /Users/yanicksenn/Documents/Projects/bazel/source_me.sh
+# E.g. ~/.zshrc
+__BAZEL_ROOT=/Users/yanicksenn/Documents/Projects/bazel
+source "$__BAZEL_ROOT/source_me.sh"
 relink
 ```
 
