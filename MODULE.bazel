@@ -1,8 +1,9 @@
 "Bazel dependencies"
 
 # See https://registry.bazel.build/ registry.
-bazel_dep(name = "rules_jvm_external", version = "5.3")
+bazel_dep(name = "rules_jvm_external", version = "6.0")
 bazel_dep(name = "rules_proto", version = "6.0.0")
+bazel_dep(name = "protobuf", version = "27.1")
 bazel_dep(name = "grpc-java", version = "1.62.2")
 
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
@@ -11,8 +12,7 @@ maven.install(
         "junit:junit:4.12",
         "com.google.truth:truth:1.4.2",
         "com.google.guava:guava:31.1-jre",
-        "com.google.protobuf:protobuf-java:4.27.0",
-        "com.google.inject:guice:7.0.0"
+        "com.google.inject:guice:7.0.0",
     ],
     fetch_sources = True,
     repositories = [

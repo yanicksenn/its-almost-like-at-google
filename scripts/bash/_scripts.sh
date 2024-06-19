@@ -13,7 +13,7 @@ search_todos() {
     if ! __bazel_workspace_check; then
         return 1
     fi
-    bazel run //scripts/bash/search:search-todos -- --root_dir=$(bazel info workspace) $@
+    bazel run //scripts/bash/search/todos:todos -- --root_dir=$(bazel info workspace) $@
 }
 
 # See /scripts/bash/update_license/README.md

@@ -60,7 +60,7 @@ See [docs](/python/com/yanicksenn/templating/README.md).
 
 Recursively finds all TODOs inside all files of a directory.
 
-See [docs](/python/com/yanicksenn/search/README.md).
+See [docs](/python/com/yanicksenn/search/todos/README.md).
 
 ## Libraries
 

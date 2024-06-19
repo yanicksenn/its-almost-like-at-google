@@ -17,7 +17,7 @@ source "${RUNFILES_DIR:-/dev/null}/$f" 2>/dev/null || \
   { echo>&2 "ERROR: cannot find $f"; exit 1; }; f=; set -e
 # --- end runfiles.bash initialization v3 ---
 
-search_todos="$(rlocation __main__/python/com/yanicksenn/search/search-todoos)"
+search_todos="$(rlocation __main__/python/com/yanicksenn/search/todos/todos)"
 if [ ! -f "$search_todos" ]; then
   echo >&2 "ERROR: Cannot find search-todos binary path."
   exit 1

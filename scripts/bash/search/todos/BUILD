@@ -1,8 +1,8 @@
 sh_binary(
-    name = "search-todos",
+    name = "todos",
     srcs = ["search_todos.sh"],
     data = [
-        "//python/com/yanicksenn/search:search-todos",
+        "//python/com/yanicksenn/search/todos:todos",
     ],
     deps = [
         "@bazel_tools//tools/bash/runfiles",

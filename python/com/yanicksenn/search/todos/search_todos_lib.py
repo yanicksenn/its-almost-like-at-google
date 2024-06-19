@@ -31,7 +31,8 @@ def __is_in_scope(full_path: str) -> bool:
         "/.DS_Store",
         "/.hg/",
         "/.git/",
-        "/.vscode/"
+        "/.vscode/",
+        "/todos/README.md"
     ]
 
     for sub_path_to_ignore in sub_paths_to_ignore:
@@ -61,11 +62,14 @@ def search_todos(root_dir: str, context: str | None, debug: bool = False) -> lis
 
             file_content = resolved_path.read_text()
             files_read += 1
+            
+            # TODO - yanicksenn: Resolve line number per todo match.
             all_todos = re.findall(todo_pattern, file_content)
             context_todos = list(filter(lambda todo: context is None or context == todo[0], all_todos))
             if len(context_todos) == 0:
                 continue
 
+            # TODO - yanicksenn: Make pretty printing optional.
             print(file_path)
             for todo in context_todos:
                 print(f'\t> {todo[0]}: {todo[1]}')
