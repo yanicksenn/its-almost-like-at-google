@@ -22,6 +22,15 @@ bazel run //python/com/yanicksenn/templating \
     --AnyIdentifiableString="Bazinga!"
 ```
 
+```bash
+# Custom rules file
+bazel run //python/com/yanicksenn/templating \
+    --template_path=/path/to/template/file \
+    --rule_path=/path/to/rules/file \
+    --target_path=/path/to/output/file \
+    --interactive
+```
+
 ## Setup
 
 ```bash

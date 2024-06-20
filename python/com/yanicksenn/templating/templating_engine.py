@@ -113,9 +113,9 @@ def __get_replacement_from_flags(rule_definition: RuleDefinition, custom_flags: 
     return flag_value
 
 # TODO - yanicksenn: Wrap parameters into a wrapper class.
-def run(template_path_raw: str, target_path_raw: str, interactive: bool, custom_flags: dict[str, str]):
+def run(template_path_raw: str, rules_path_raw: str, target_path_raw: str, interactive: bool, custom_flags: dict[str, str]):
     template_path = __validate_template_path(template_path_raw)
-    rules_path = __validate_rules_path(template_path_raw + '.rules')
+    rules_path = __validate_rules_path(rules_path_raw)
     target_path = __validate_target_path(target_path_raw)
 
     rule_definition_pattern_raw = r'^([a-zA-Z0-9_]+)\s*=?\s*([a-zA-Z0-9_\- *%+\.]*)?\s*(\[[^;]*])?\s*;$'
