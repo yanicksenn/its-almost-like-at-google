@@ -16,6 +16,14 @@ class TemplatePreconditionException(Exception):
         super().__init__(message)
 
 @dataclass
+class TemplateRequest:
+    template_path_raw: str
+    rules_path_raw: str
+    target_path_raw: str
+    interactive: bool
+    custom_flags: dict[str, str]
+
+@dataclass
 class RuleDefinition:
     key: str
     default: str | None
@@ -112,11 +120,10 @@ def __get_replacement_from_flags(rule_definition: RuleDefinition, custom_flags: 
 
     return flag_value
 
-# TODO - yanicksenn: Wrap parameters into a wrapper class.
-def run(template_path_raw: str, rules_path_raw: str, target_path_raw: str, interactive: bool, custom_flags: dict[str, str]):
-    template_path = __validate_template_path(template_path_raw)
-    rules_path = __validate_rules_path(rules_path_raw)
-    target_path = __validate_target_path(target_path_raw)
+def run(template_request: TemplateRequest):
+    template_path = __validate_template_path(template_request.template_path_raw)
+    rules_path = __validate_rules_path(template_request.rules_path_raw)
+    target_path = __validate_target_path(template_request.target_path_raw)
 
     rule_definition_pattern_raw = r'^([a-zA-Z0-9_]+)\s*=?\s*([a-zA-Z0-9_\- *%+\.]*)?\s*(\[[^;]*])?\s*;$'
     rule_definition_pattern = re.compile(rule_definition_pattern_raw, flags = re.MULTILINE)
@@ -133,10 +140,10 @@ def run(template_path_raw: str, rules_path_raw: str, target_path_raw: str, inter
     fixed_content = template_content
     for key in rule_definitions:
         key_replacement = None
-        if interactive:
+        if template_request.interactive:
             key_replacement = __get_replacement_from_user_input_until_valid(rule_definitions[key])
         else:
-            key_replacement = __get_replacement_from_flags(rule_definitions[key], custom_flags)
+            key_replacement = __get_replacement_from_flags(rule_definitions[key], template_request.custom_flags)
     
         fixed_content = fixed_content.replace(key, key_replacement)
     

@@ -1,6 +1,7 @@
 import sys
 from python.com.yanicksenn.flags import flags
 from python.com.yanicksenn.templating.templating_engine import TemplatePreconditionException
+from python.com.yanicksenn.templating.templating_engine import TemplateRequest
 from python.com.yanicksenn.templating.templating_engine import run
 
 def main():
@@ -26,7 +27,7 @@ def main():
     custom_flags = {k: v for k, v in flags.all_flags().items() if k not in known_flag_keys } if not interactive else None
     
     try:
-        run(template_path, rules_path, target_path, interactive, custom_flags)
+        run(TemplateRequest(template_path, rules_path, target_path, interactive, custom_flags))
     except TemplatePreconditionException as err:
         print(f"ERROR: {str(err)}")
         sys.exit(1)
