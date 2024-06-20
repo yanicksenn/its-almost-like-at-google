@@ -9,3 +9,6 @@ bazel-*
 
 # Mercurial
 .hg
+
+# Personal
+source_personal.sh

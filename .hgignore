@@ -10,3 +10,6 @@ bazel-*
 # Git
 .git
 .gitignore
+
+# Personal
+source_personal.sh
