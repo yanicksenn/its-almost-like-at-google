@@ -14,32 +14,32 @@ source "${RUNFILES_DIR:-/dev/null}/$f" 2>/dev/null || \
 
 templating="$(rlocation __main__/python/com/yanicksenn/templating/templating)"
 if [[ ! -f "${templating:-}" ]]; then
-  echo >&2 "ERROR: cannot find templating binary path."
+  echo >&2 "ERROR: Cannot find templating binary path."
   exit 2
 fi
 
 workspace_root=$1
 if [ -z "$workspace_root" ]; then
-  echo >&2 "ERROR: workspace root is not set."
+  echo >&2 "ERROR: Workspace root is not set."
   exit 3
 fi
 
 package_root=$2
 if [[ ! "$package_root" =~ ^[a-zA-Z0-9_/\-]+$ ]]; then
-  echo >&2 "ERROR: package root is not valid (Needs to match [a-zA-Z0-9_]+)."
+  echo >&2 "ERROR: Package root is not valid (Needs to match [a-zA-Z0-9_]+)."
   exit 4
 fi
 
 package_name=$3
 if [[ ! "$package_name" =~ ^[a-zA-Z0-9_]+$ ]]; then
-  echo >&2 "ERROR: package name is not valid (Needs to match [a-zA-Z0-9_]+)."
+  echo >&2 "ERROR:Package name is not valid (Needs to match [a-zA-Z0-9_]+)."
   exit 4
 fi
 
 package_path=$workspace_root/$package_root/$package_name
 
 if [ -d "$package_path" ]; then
-  echo >&2 "ERROR: package $package_path already exists."
+  echo >&2 "ERROR: Package $package_path already exists."
   exit 5
 fi
 
@@ -48,14 +48,14 @@ rules_path=$(rlocation $data_root/RULES)
 package_root_python=${package_root////.}
 
 if [[ ! "$package_root_python" =~ ^[a-zA-Z0-9_\.]+$ ]]; then
-  echo >&2 "ERROR: package root is not a valid python pathage path (Runtime error)."
+  echo >&2 "ERROR: Package root is not a valid python pathage path (Runtime error)."
   exit 6
 fi
 
-echo "INFO: creating $package_path ..."
+echo "INFO: Creating $package_path ..."
 mkdir -p "$package_path"
 
-echo "INFO: templating BUILD ..."
+echo "INFO: Templating BUILD ..."
 $templating -- \
     --template_path=$(rlocation $data_root/BUILD.template) \
     --rules_path=$rules_path \
@@ -63,7 +63,7 @@ $templating -- \
     --__PACKAGE_ROOT=$package_root_python \
     --__PACKAGE_NAME=$package_name
 
-echo "INFO: templating README.md ..."
+echo "INFO: Templating README.md ..."
 $templating -- \
     --template_path=$(rlocation $data_root/README.md.template) \
     --rules_path=$rules_path \
@@ -71,7 +71,7 @@ $templating -- \
     --__PACKAGE_ROOT=$package_root_python \
     --__PACKAGE_NAME=$package_name
 
-echo "INFO: templating main.py ..."
+echo "INFO: Templating main.py ..."
 $templating -- \
     --template_path=$(rlocation $data_root/main.py.template) \
     --rules_path=$rules_path \
@@ -79,7 +79,7 @@ $templating -- \
     --__PACKAGE_ROOT=$package_root_python \
     --__PACKAGE_NAME=$package_name
 
-echo "INFO: templating lib.py ..."
+echo "INFO: Templating lib.py ..."
 $templating -- \
     --template_path=$(rlocation $data_root/lib.py.template) \
     --rules_path=$rules_path \
@@ -87,4 +87,4 @@ $templating -- \
     --__PACKAGE_ROOT=$package_root_python \
     --__PACKAGE_NAME=$package_name
 
-echo "INFO: templating complete."
+echo "INFO: Templating complete."
