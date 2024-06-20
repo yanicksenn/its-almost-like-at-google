@@ -32,7 +32,7 @@ create_python_binary() {
     if ! __bazel_workspace_check; then
         return 1
     fi
-    bazel run //scripts/bash/templates/binary/python:run -- $(__bazel_workspace) python/com/yanicksen $@
+    bazel run //scripts/bash/templates/binary/python:run -- $(__bazel_workspace) python/com/yanicksenn $@
 }
 
 # See /scripts/bash/update_license/README.md
