@@ -28,6 +28,9 @@ def getAsInt(name: str) -> Optional[int]:
         return int(valueRaw)
     except ValueError:
         return None
+
+def is_toggled(name: str) -> bool:
+    return is_set(name) and (not has_value(name) or get(name).lower() == "true")
     
 def is_set(name: str):
     return name in __parsed_args

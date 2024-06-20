@@ -43,6 +43,30 @@ class FlagsTest(unittest.TestCase):
         self.__parse_flags("--value=123")
         self.assertTrue(flags.getAsInt("value") == 123)
 
+    def test_is_toggled_whenUnset_returnsFalse(self):
+        self.__parse_flags("")
+        self.assertFalse(flags.is_toggled("value"))
+
+    def test_is_toggled_whenSetWithNoValue_returnTrue(self):
+        self.__parse_flags("--value")
+        self.assertTrue(flags.is_toggled("value"))
+
+    def test_is_toggled_whenSetWithEmptyString_returnsFalse(self):
+        self.__parse_flags("--value=")
+        self.assertFalse(flags.is_toggled("value"))
+
+    def test_is_toggled_whenSetWithInvalidString_returnsFalse(self):
+        self.__parse_flags("--value=ABC")
+        self.assertFalse(flags.is_toggled("value"))
+
+    def test_is_toggled_whenSetWithFalseString_returnsFalse(self):
+        self.__parse_flags("--value=false")
+        self.assertFalse(flags.is_toggled("value"))
+
+    def test_is_toggled_whenSetWithTrueString_returnsTrue(self):
+        self.__parse_flags("--value=true")
+        self.assertTrue(flags.is_toggled("value"))
+
     def test_is_set_whenUnset_returnsFalse(self):
         self.__parse_flags("")
         self.assertFalse(flags.is_set("value"))

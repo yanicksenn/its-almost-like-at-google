@@ -20,8 +20,7 @@ def main():
     if rules_path is None: 
         rules_path = template_path + ".rules"
     
-    # TODO - anyone: Ensure --interactive=true also enables the interactive mode.
-    interactive = flags.is_set("interactive") and not flags.has_value("interactive")
+    interactive = flags.is_toggled("interactive")
 
     known_flag_keys = ["template_path", "target_path", "interactive"]
     custom_flags = {k: v for k, v in flags.all_flags().items() if k not in known_flag_keys } if not interactive else None

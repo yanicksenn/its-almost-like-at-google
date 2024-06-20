@@ -11,9 +11,7 @@ def main():
         raise AssertionError("root_dir must be set")
 
     context = flags.get("context")
-
-    # TODO - yanicksenn: Introduce new flags method for toggles.
-    debug = flags.is_set("debug") and (not flags.has_value("debug") or flags.get("debug").lower == "true")
+    debug = flags.is_toggled("debug")
 
     try:
         search_todos(root_dir, context, debug)
