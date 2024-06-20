@@ -28,7 +28,7 @@ license_out_path=$license_path.out
 $templating -- \
     --template_path=$(rlocation __main__/scripts/bash/update_license/data/LICENSE.template) \
     --target_path=$license_out_path \
-    --__YEAR=$(date +%Y)
+    --__YEAR=$(date +%Y) --debug
 echo "INFO: Successfully written $license_out_path."
 
 if [ -f "$license_path" ]; then

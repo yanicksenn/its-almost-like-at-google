@@ -22,6 +22,7 @@ class TemplateRequest:
     target_path_raw: str
     interactive: bool
     custom_flags: dict[str, str]
+    debug: bool
 
 @dataclass
 class RuleDefinition:
@@ -43,7 +44,11 @@ def __validate_template_path(template_path_raw: str) -> Path:
         return Path(template_path_raw).resolve(strict=True)
     except FileNotFoundError:
         raise TemplatePreconditionException(f"template {template_path_raw} cannot be resolved")
-    
+
+def __extract_templates(template_path: Path) -> list[Path]:
+    # TODO - yanicksenn: Extract all templates from that path.
+    return [ template_path ]
+
 def __validate_rules_path(rules_path_raw: str) -> Path:
     try:
         return Path(rules_path_raw).resolve(strict=True)
@@ -136,17 +141,29 @@ def run(template_request: TemplateRequest):
             match[2])
         rule_definitions[rule_definition.key] = rule_definition
 
-    template_content = template_path.read_text()
-    fixed_content = template_content
+    key_replacements: dict[str, str] = {}
     for key in rule_definitions:
         key_replacement = None
         if template_request.interactive:
             key_replacement = __get_replacement_from_user_input_until_valid(rule_definitions[key])
         else:
             key_replacement = __get_replacement_from_flags(rule_definitions[key], template_request.custom_flags)
+        key_replacements[key] = key_replacement
+
+    for template in __extract_templates(template_path):
+        template_content = template.read_text()
+        fixed_content = template_content
+
+        if template_request.debug:
+            print(f"INFO: Fixing {target_path.absolute()} ...")
+
+        for (key, replacement) in key_replacements.items():
+            fixed_content = fixed_content.replace(key, replacement)
+
+        target_path.write_text(fixed_content)
     
-        fixed_content = fixed_content.replace(key, key_replacement)
-    
-    target_path.write_text(fixed_content)
+
+    if template_request.debug:
+        print(f"INFO: Templating complete")
 
     

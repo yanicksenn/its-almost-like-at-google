@@ -22,11 +22,12 @@ def main():
     
     interactive = flags.is_toggled("interactive")
 
-    known_flag_keys = ["template_path", "target_path", "interactive"]
+    known_flag_keys = ["template_path", "target_path", "interactive", "debug"]
     custom_flags = {k: v for k, v in flags.all_flags().items() if k not in known_flag_keys } if not interactive else None
+    debug = flags.is_toggled("debug")
     
     try:
-        run(TemplateRequest(template_path, rules_path, target_path, interactive, custom_flags))
+        run(TemplateRequest(template_path, rules_path, target_path, interactive, custom_flags, debug))
     except TemplatePreconditionException as err:
         print(f"ERROR: {str(err)}")
         sys.exit(1)
