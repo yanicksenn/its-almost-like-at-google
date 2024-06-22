@@ -19,7 +19,7 @@ class TemplatePreconditionException(Exception):
 class TemplateRequest:
     template_path_raw: str
     rules_path_raw: str
-    target_path_raw: str
+    target_root_raw: str
     interactive: bool
     custom_flags: dict[str, str]
     debug: bool
@@ -45,9 +45,22 @@ def __validate_template_path(template_path_raw: str) -> Path:
     except FileNotFoundError:
         raise TemplatePreconditionException(f"template {template_path_raw} cannot be resolved")
 
-def __extract_templates(template_path: Path) -> list[Path]:
-    # TODO - yanicksenn: Extract all templates from that path.
-    return [ template_path ]
+def __extract_templates(template_path: Path, rules_path: Path) -> list[str]:
+    if template_path.is_file():
+        return [ template_path ]
+    else:
+        templates: list[Path] = []
+        for dirpath, _, filenames in template_path.walk():
+            for filename in filenames:
+                absolute_filepath = str(Path.joinpath(dirpath, filename))
+                
+                # Ignore RULES file.
+                if absolute_filepath == str(rules_path):
+                    continue
+                
+                relative_filepath = absolute_filepath[len(str(template_path)) + 1:]
+                templates.append(relative_filepath)
+        return templates
 
 def __validate_rules_path(rules_path_raw: str) -> Path:
     try:
@@ -55,12 +68,12 @@ def __validate_rules_path(rules_path_raw: str) -> Path:
     except FileNotFoundError:
         raise TemplatePreconditionException(f"rules {rules_path_raw} cannot be resolved")
 
-def __validate_target_path(target_path_raw: str) -> Path:
+def __validate_target_root(target_root_raw: str) -> Path:
     try:
-        Path(target_path_raw).resolve(strict=True)
-        raise TemplatePreconditionException(f"target {target_path_raw} already exists")
+        Path(target_root_raw).resolve(strict=True)
+        raise TemplatePreconditionException(f"target {target_root_raw} already exists")
     except FileNotFoundError:
-        return Path(target_path_raw)
+        return Path(target_root_raw)
 
 def __parse_rule_definition_rules(rules_raw: str | None) -> list[AbstractRule]:
     if not rules_raw:
@@ -128,7 +141,7 @@ def __get_replacement_from_flags(rule_definition: RuleDefinition, custom_flags: 
 def run(template_request: TemplateRequest):
     template_path = __validate_template_path(template_request.template_path_raw)
     rules_path = __validate_rules_path(template_request.rules_path_raw)
-    target_path = __validate_target_path(template_request.target_path_raw)
+    target_root = __validate_target_root(template_request.target_root_raw)
 
     rule_definition_pattern_raw = r'^([a-zA-Z0-9_]+)\s*=?\s*([a-zA-Z0-9_\- *%+\.]*)?\s*(\[[^;]*])?\s*;$'
     rule_definition_pattern = re.compile(rule_definition_pattern_raw, flags = re.MULTILINE)
@@ -150,17 +163,30 @@ def run(template_request: TemplateRequest):
             key_replacement = __get_replacement_from_flags(rule_definitions[key], template_request.custom_flags)
         key_replacements[key] = key_replacement
 
-    for template in __extract_templates(template_path):
-        template_content = template.read_text()
+
+    if template_request.debug:
+        print(f"INFO: Creating {target_root.absolute()} ...")
+        target_root.mkdir()
+
+    for relative_template in __extract_templates(template_path, rules_path):
+        template_content = Path.joinpath(template_path, relative_template).read_text()
         fixed_content = template_content
 
+        # TODO - yanicksenn: Also replace filenames if they contain a key.
+        output_file = Path.joinpath(target_root, relative_template)
+
+        if not output_file.parent.exists():
+            if template_request.debug:
+                print(f"INFO: Creating {output_file.parent.absolute()} ...")
+            output_file.parent.mkdir()
+
         if template_request.debug:
-            print(f"INFO: Fixing {target_path.absolute()} ...")
+            print(f"INFO: Fixing {output_file.absolute()} ...")
 
         for (key, replacement) in key_replacements.items():
             fixed_content = fixed_content.replace(key, replacement)
 
-        target_path.write_text(fixed_content)
+        output_file.write_text(fixed_content)
     
 
     if template_request.debug:

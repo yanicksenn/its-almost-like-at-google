@@ -43,7 +43,7 @@ if [ -d "$package_path" ]; then
   exit 5
 fi
 
-data_root=__main__/scripts/bash/templates/binary/python/data
+data_root=$workspace_root/scripts/bash/templates/binary/python/data
 rules_path=$(rlocation $data_root/RULES)
 package_root_python=${package_root////.}
 
@@ -52,39 +52,10 @@ if [[ ! "$package_root_python" =~ ^[a-zA-Z0-9_\.]+$ ]]; then
   exit 6
 fi
 
-echo "INFO: Creating $package_path ..."
-mkdir -p "$package_path"
-
-echo "INFO: Templating BUILD ..."
 $templating -- \
-    --template_path=$(rlocation $data_root/BUILD.template) \
+    --template_path=$data_root \
     --rules_path=$rules_path \
-    --target_path=$package_path/BUILD \
+    --target_path=$package_path \
     --__PACKAGE_ROOT=$package_root_python \
-    --__PACKAGE_NAME=$package_name
-
-echo "INFO: Templating README.md ..."
-$templating -- \
-    --template_path=$(rlocation $data_root/README.md.template) \
-    --rules_path=$rules_path \
-    --target_path=$package_path/README.md \
-    --__PACKAGE_ROOT=$package_root_python \
-    --__PACKAGE_NAME=$package_name
-
-echo "INFO: Templating main.py ..."
-$templating -- \
-    --template_path=$(rlocation $data_root/main.py.template) \
-    --rules_path=$rules_path \
-    --target_path=$package_path/main.py \
-    --__PACKAGE_ROOT=$package_root_python \
-    --__PACKAGE_NAME=$package_name
-
-echo "INFO: Templating lib.py ..."
-$templating -- \
-    --template_path=$(rlocation $data_root/lib.py.template) \
-    --rules_path=$rules_path \
-    --target_path=$package_path/lib.py \
-    --__PACKAGE_ROOT=$package_root_python \
-    --__PACKAGE_NAME=$package_name
-
-echo "INFO: Templating complete."
+    --__PACKAGE_NAME=$package_name \
+    --debug

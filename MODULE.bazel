@@ -23,3 +23,7 @@ maven.install(
     ],
 )
 use_repo(maven, "maven")
+
+register_toolchains(
+    "//toolchains:py_toolchain"
+)
