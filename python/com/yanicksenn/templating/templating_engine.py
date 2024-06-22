@@ -184,7 +184,7 @@ def run(template_request: TemplateRequest):
 
     if not target_root.exists():
         __info(template_request, f"Creating {target_root.absolute()} ...")
-        target_root.mkdir()
+        target_root.mkdir(parents = True)
 
     for relative_template in __extract_templates(template_path, rules_path):
         template_content = Path.joinpath(template_path, relative_template).read_text()
