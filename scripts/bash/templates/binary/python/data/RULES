@@ -1,2 +1,2 @@
-__PACKAGE_ROOT [REGEX([a-zA-Z0-_\.]+), MIN_LENGTH(3)];
-__PACKAGE_NAME [REGEX([a-zA-Z0-_]+), MIN_LENGTH(3)];
+__PACKAGE_ROOT [REGEX(^[a-zA-Z0-_\.]+$), MIN_LENGTH(3)];
+__PACKAGE_NAME [REGEX(^[a-zA-Z0-_]+$), MIN_LENGTH(3)];

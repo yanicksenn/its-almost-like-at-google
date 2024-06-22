@@ -22,6 +22,7 @@ class TemplateRequest:
     target_root_raw: str
     interactive: bool
     custom_flags: dict[str, str]
+    override_output: bool
     debug: bool
 
 @dataclass
@@ -39,11 +40,35 @@ __rule_parsers: list[AbstractParser] = [
     max_length.Parser()
 ]
 
-def __validate_template_path(template_path_raw: str) -> Path:
-    try:
-        return Path(template_path_raw).resolve(strict=True)
-    except FileNotFoundError:
+def __info(template_request: TemplateRequest, message: str):
+    if template_request.debug:
+        print(f"INFO: {message}")
+
+def __validate_template_path(template_path_raw: str):
+    path = Path(template_path_raw)
+    if not path.exists():
         raise TemplatePreconditionException(f"template {template_path_raw} cannot be resolved")
+
+def __validate_rules_path(rules_path_raw: str):
+    path = Path(rules_path_raw)
+    if not path.exists():
+        raise TemplatePreconditionException(f"rules {rules_path_raw} cannot be resolved")
+    if not path.is_file():
+        raise TemplatePreconditionException(f"rules {rules_path_raw} is not a file")
+
+def __validate_template_request(template_request: TemplateRequest):
+    __validate_template_path(template_request.template_path_raw)
+    __validate_rules_path(template_request.rules_path_raw)
+
+def __remove(template_request: TemplateRequest, path: Path):
+    if path.is_file():
+        __info(template_request, f"Deleting file {path} ...")
+        path.unlink()
+    else:
+        for child in path.iterdir():
+            __remove(template_request, child)
+        __info(template_request, f"Deleting directory {path} ...")
+        path.rmdir()
 
 def __extract_templates(template_path: Path, rules_path: Path) -> list[str]:
     if template_path.is_file():
@@ -61,19 +86,6 @@ def __extract_templates(template_path: Path, rules_path: Path) -> list[str]:
                 relative_filepath = absolute_filepath[len(str(template_path)) + 1:]
                 templates.append(relative_filepath)
         return templates
-
-def __validate_rules_path(rules_path_raw: str) -> Path:
-    try:
-        return Path(rules_path_raw).resolve(strict=True)
-    except FileNotFoundError:
-        raise TemplatePreconditionException(f"rules {rules_path_raw} cannot be resolved")
-
-def __validate_target_root(target_root_raw: str) -> Path:
-    try:
-        Path(target_root_raw).resolve(strict=True)
-        raise TemplatePreconditionException(f"target {target_root_raw} already exists")
-    except FileNotFoundError:
-        return Path(target_root_raw)
 
 def __parse_rule_definition_rules(rules_raw: str | None) -> list[AbstractRule]:
     if not rules_raw:
@@ -139,13 +151,15 @@ def __get_replacement_from_flags(rule_definition: RuleDefinition, custom_flags: 
     return flag_value
 
 def run(template_request: TemplateRequest):
-    template_path = __validate_template_path(template_request.template_path_raw)
-    rules_path = __validate_rules_path(template_request.rules_path_raw)
-    target_root = __validate_target_root(template_request.target_root_raw)
+    __validate_template_request(template_request)
+    template_path = Path(template_request.template_path_raw)
+    rules_path = Path(template_request.rules_path_raw)
+    target_root = Path(template_request.target_root_raw)
 
     rule_definition_pattern_raw = r'^([a-zA-Z0-9_]+)\s*=?\s*([a-zA-Z0-9_\- *%+\.]*)?\s*(\[[^;]*])?\s*;$'
     rule_definition_pattern = re.compile(rule_definition_pattern_raw, flags = re.MULTILINE)
 
+    __info(template_request, f"Extracting rules {rules_path.absolute()} ...")
     rule_definitions: dict[str, RuleDefinition] = {}
     for match in re.findall(rule_definition_pattern, rules_path.read_text()):
         rule_definition = __parse_rule_definition(
@@ -154,6 +168,7 @@ def run(template_request: TemplateRequest):
             match[2])
         rule_definitions[rule_definition.key] = rule_definition
 
+    __info(template_request, "Getting replacements ...")
     key_replacements: dict[str, str] = {}
     for key in rule_definitions:
         key_replacement = None
@@ -162,10 +177,13 @@ def run(template_request: TemplateRequest):
         else:
             key_replacement = __get_replacement_from_flags(rule_definitions[key], template_request.custom_flags)
         key_replacements[key] = key_replacement
+        __info(template_request, f"Replacing {key} with '{key_replacement}'.")
 
+    if template_request.override_output and target_root.exists():
+        __remove(template_request, target_root)
 
-    if template_request.debug:
-        print(f"INFO: Creating {target_root.absolute()} ...")
+    if not target_root.exists():
+        __info(template_request, f"Creating {target_root.absolute()} ...")
         target_root.mkdir()
 
     for relative_template in __extract_templates(template_path, rules_path):
@@ -176,20 +194,14 @@ def run(template_request: TemplateRequest):
         output_file = Path.joinpath(target_root, relative_template)
 
         if not output_file.parent.exists():
-            if template_request.debug:
-                print(f"INFO: Creating {output_file.parent.absolute()} ...")
+            __info(template_request, f"Creating {output_file.parent.absolute()} ...")
             output_file.parent.mkdir()
 
-        if template_request.debug:
-            print(f"INFO: Fixing {output_file.absolute()} ...")
-
+        __info(template_request, f"Fixing {output_file.absolute()} ...")
         for (key, replacement) in key_replacements.items():
             fixed_content = fixed_content.replace(key, replacement)
 
         output_file.write_text(fixed_content)
     
 
-    if template_request.debug:
-        print(f"INFO: Templating complete")
-
-    
+    __info(template_request, "Templating complete.")

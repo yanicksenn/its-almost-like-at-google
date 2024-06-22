@@ -25,37 +25,22 @@ if [ -z "$workspace_root" ]; then
 fi
 
 package_root=$2
-if [[ ! "$package_root" =~ ^[a-zA-Z0-9_/\-]+$ ]]; then
-  echo >&2 "ERROR: Package root is not valid (Needs to match [a-zA-Z0-9_]+)."
-  exit 4
-fi
-
 package_name=$3
-if [[ ! "$package_name" =~ ^[a-zA-Z0-9_]+$ ]]; then
-  echo >&2 "ERROR:Package name is not valid (Needs to match [a-zA-Z0-9_]+)."
-  exit 4
-fi
 
 package_path=$workspace_root/$package_root/$package_name
-
-if [ -d "$package_path" ]; then
-  echo >&2 "ERROR: Package $package_path already exists."
-  exit 5
-fi
-
 data_root=$workspace_root/scripts/bash/templates/binary/python/data
 rules_path=$(rlocation $data_root/RULES)
 package_root_python=${package_root////.}
 
 if [[ ! "$package_root_python" =~ ^[a-zA-Z0-9_\.]+$ ]]; then
   echo >&2 "ERROR: Package root is not a valid python pathage path (Runtime error)."
-  exit 6
+  exit 5
 fi
 
 $templating -- \
     --template_path=$data_root \
     --rules_path=$rules_path \
-    --target_path=$package_path \
+    --target_root=$package_path \
     --__PACKAGE_ROOT=$package_root_python \
     --__PACKAGE_NAME=$package_name \
-    --debug
+    # --debug
