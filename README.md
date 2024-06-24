@@ -62,6 +62,12 @@ Recursively finds all TODOs inside all files of a directory.
 
 See [docs](/python/com/yanicksenn/search/todos/README.md).
 
+### Proofs
+
+Proofs and thought experiments such as the Gambler's Fallacy and Monty Hall.
+
+See [docs](/python/com/yanicksenn/proof/README.md).
+
 ## Libraries
 
 ### Flags
