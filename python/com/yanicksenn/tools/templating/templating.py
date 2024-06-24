@@ -2,9 +2,9 @@ import sys
 from python.com.yanicksenn.libraries.flags import flags
 from python.com.yanicksenn.libraries.logging import logging
 from python.com.yanicksenn.libraries.logging.logging import LoggingLevel
-from python.com.yanicksenn.templating.templating_engine import TemplatePreconditionException
-from python.com.yanicksenn.templating.templating_engine import TemplateRequest
-from python.com.yanicksenn.templating.templating_engine import run
+from python.com.yanicksenn.tools.templating.templating_engine import TemplatePreconditionException
+from python.com.yanicksenn.tools.templating.templating_engine import TemplateRequest
+from python.com.yanicksenn.tools.templating.templating_engine import run
 
 def main():
     flags.parse(sys.argv)

@@ -1,5 +1,5 @@
-from python.com.yanicksenn.templating.rules.abstract_rule import AnyArgumentRuleParser
-from python.com.yanicksenn.templating.rules.abstract_rule import AbstractRule
+from python.com.yanicksenn.tools.templating.rules.abstract_rule import AnyArgumentRuleParser
+from python.com.yanicksenn.tools.templating.rules.abstract_rule import AbstractRule
 import re
 
 class Rule(AbstractRule):

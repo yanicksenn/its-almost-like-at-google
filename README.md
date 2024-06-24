@@ -54,13 +54,13 @@ bazel run //java/com/yanicksenn/hellogrpc:hello_service_client
 
 Simple templating engine with small set of replacement rules.
 
-See [docs](/python/com/yanicksenn/templating/README.md).
+See [docs](/python/com/yanicksenn/tools/templating/README.md).
 
-### Search TODOs
+### TODOs
 
 Recursively finds all TODOs inside all files of a directory.
 
-See [docs](/python/com/yanicksenn/search/todos/README.md).
+See [docs](/python/com/yanicksenn/tools/todos/README.md).
 
 ### Proofs
 

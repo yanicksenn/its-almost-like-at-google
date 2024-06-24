@@ -1,5 +1,5 @@
-from python.com.yanicksenn.templating.rules.abstract_rule import NoArgumentRuleParser
-from python.com.yanicksenn.templating.rules.abstract_rule import AbstractRule
+from python.com.yanicksenn.tools.templating.rules.abstract_rule import NoArgumentRuleParser
+from python.com.yanicksenn.tools.templating.rules.abstract_rule import AbstractRule
 
 class Rule(AbstractRule):
     def is_valid(self, value: str) -> bool:

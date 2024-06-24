@@ -3,14 +3,14 @@ from pathlib import Path
 from python.com.yanicksenn.libraries.logging import logging
 import re
 
-from python.com.yanicksenn.templating.rules.abstract_rule import AbstractParser
-from python.com.yanicksenn.templating.rules.abstract_rule import AbstractRule
-import python.com.yanicksenn.templating.rules.regex_rule as regex
-import python.com.yanicksenn.templating.rules.alphabetic_rule as alphabetic
-import python.com.yanicksenn.templating.rules.alphanumeric_rule as alphanumeric
-import python.com.yanicksenn.templating.rules.numeric_rule as numeric
-import python.com.yanicksenn.templating.rules.min_length_rule as min_length
-import python.com.yanicksenn.templating.rules.max_length_rule as max_length
+from python.com.yanicksenn.tools.templating.rules.abstract_rule import AbstractParser
+from python.com.yanicksenn.tools.templating.rules.abstract_rule import AbstractRule
+import python.com.yanicksenn.tools.templating.rules.regex_rule as regex
+import python.com.yanicksenn.tools.templating.rules.alphabetic_rule as alphabetic
+import python.com.yanicksenn.tools.templating.rules.alphanumeric_rule as alphanumeric
+import python.com.yanicksenn.tools.templating.rules.numeric_rule as numeric
+import python.com.yanicksenn.tools.templating.rules.min_length_rule as min_length
+import python.com.yanicksenn.tools.templating.rules.max_length_rule as max_length
 
 class TemplatePreconditionException(Exception):
     def __init__(self, message):

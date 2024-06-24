@@ -32,7 +32,7 @@ search_todos() {
     if ! __bazel_workspace_check; then
         return 1
     fi
-    bazel run //python/com/yanicksenn/search/todos:todos -- --root_dir=$(__bazel_workspace) $@
+    bazel run //python/com/yanicksenn/tools/todos:todos -- --root_dir=$(__bazel_workspace) $@
 }
 
 # See /scripts/bash/templates/python/binary/README.md
@@ -49,13 +49,5 @@ create_python_library() {
         return 1
     fi
     bazel run //scripts/bash/templates/python/library:run -- $(__bazel_workspace) python/com/yanicksenn/libraries $@
-}
-
-# See /scripts/bash/update_license/README.md
-update_license() {
-    if ! __bazel_workspace_check; then
-        return 1
-    fi
-    bazel run //scripts/bash/update_license:update_license -- $(__bazel_workspace)
 }
 

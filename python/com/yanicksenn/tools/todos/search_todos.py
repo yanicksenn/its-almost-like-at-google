@@ -1,6 +1,6 @@
 import sys
 from python.com.yanicksenn.libraries.flags import flags
-from python.com.yanicksenn.search.todos.search_todos_lib import search_todos
+from python.com.yanicksenn.tools.todos.search_todos_lib import search_todos
 
 def main():
     flags.parse(sys.argv)

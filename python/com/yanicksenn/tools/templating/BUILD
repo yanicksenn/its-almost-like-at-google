@@ -9,7 +9,7 @@ py_library(
     ],
     deps = [
         "//python/com/yanicksenn/libraries/logging",
-        "//python/com/yanicksenn/templating/rules",
+        "//python/com/yanicksenn/tools/templating/rules",
     ]
 )
 

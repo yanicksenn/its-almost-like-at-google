@@ -1,5 +1,5 @@
-from python.com.yanicksenn.templating.rules.abstract_rule import NoArgumentRuleParser
-import python.com.yanicksenn.templating.rules.regex_rule as regex
+from python.com.yanicksenn.tools.templating.rules.abstract_rule import NoArgumentRuleParser
+import python.com.yanicksenn.tools.templating.rules.regex_rule as regex
 
 class Rule(regex.Rule):
     def __init__(self):
