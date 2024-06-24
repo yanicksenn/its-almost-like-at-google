@@ -1,7 +1,6 @@
 import unittest
 from python.com.yanicksenn.flags import flags
 
-
 class FlagsTest(unittest.TestCase):
 
     def __parse_flags(self, args: str):
@@ -99,10 +98,7 @@ class FlagsTest(unittest.TestCase):
         self.__parse_flags("--value=ABC")
         self.assertTrue(flags.has_value("value"))
 
-
-
-    # TODO: yanicksenn - Add remaining test cases.
-
+    # TODO - yanicksenn: Add remaining test cases.
 
 if __name__ == "__main__":
     unittest.main()
