@@ -43,4 +43,4 @@ $templating -- \
     --target_root=$package_path \
     --__PACKAGE_ROOT=$package_root_python \
     --__PACKAGE_NAME=$package_name \
-    # --debug
+    --debug

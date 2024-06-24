@@ -1,5 +1,6 @@
 from dataclasses import dataclass
 from pathlib import Path
+from python.com.yanicksenn.libraries.logging import logging
 import re
 
 from python.com.yanicksenn.templating.rules.abstract_rule import AbstractParser
@@ -23,7 +24,6 @@ class TemplateRequest:
     interactive: bool
     custom_flags: dict[str, str]
     override_output: bool
-    debug: bool
 
 @dataclass
 class RuleDefinition:
@@ -39,11 +39,6 @@ __rule_parsers: list[AbstractParser] = [
     min_length.Parser(), 
     max_length.Parser()
 ]
-
-# TODO - yanicksenn: Put info logging into separate logging library.
-def __info(template_request: TemplateRequest, message: str):
-    if template_request.debug:
-        print(f"INFO: {message}")
 
 def __validate_template_path(template_path_raw: str):
     path = Path(template_path_raw)
@@ -63,12 +58,12 @@ def __validate_template_request(template_request: TemplateRequest):
 
 def __remove(template_request: TemplateRequest, path: Path):
     if path.is_file():
-        __info(template_request, f"Deleting file {path} ...")
+        logging.debug(f"Deleting file {path} ...")
         path.unlink()
     else:
         for child in path.iterdir():
             __remove(template_request, child)
-        __info(template_request, f"Deleting directory {path} ...")
+        logging.debug(f"Deleting directory {path} ...")
         path.rmdir()
 
 def __extract_templates(template_path: Path, rules_path: Path) -> list[str]:
@@ -160,7 +155,7 @@ def run(template_request: TemplateRequest):
     rule_definition_pattern_raw = r'^([a-zA-Z0-9_]+)\s*=?\s*([a-zA-Z0-9_\- *%+\.]*)?\s*(\[[^;]*])?\s*;$'
     rule_definition_pattern = re.compile(rule_definition_pattern_raw, flags = re.MULTILINE)
 
-    __info(template_request, f"Extracting rules {rules_path.absolute()} ...")
+    logging.debug(f"Extracting rules {rules_path.absolute()} ...")
     rule_definitions: dict[str, RuleDefinition] = {}
     for match in re.findall(rule_definition_pattern, rules_path.read_text()):
         rule_definition = __parse_rule_definition(
@@ -169,7 +164,7 @@ def run(template_request: TemplateRequest):
             match[2])
         rule_definitions[rule_definition.key] = rule_definition
 
-    __info(template_request, "Getting replacements ...")
+    logging.debug("Getting replacements ...")
     key_replacements: dict[str, str] = {}
     for key in rule_definitions:
         key_replacement = None
@@ -178,13 +173,13 @@ def run(template_request: TemplateRequest):
         else:
             key_replacement = __get_replacement_from_flags(rule_definitions[key], template_request.custom_flags)
         key_replacements[key] = key_replacement
-        __info(template_request, f"Replacing {key} with '{key_replacement}'.")
+        logging.debug(f"Replacing {key} with '{key_replacement}'.")
 
     if template_request.override_output and target_root.exists():
         __remove(template_request, target_root)
 
     if not target_root.exists():
-        __info(template_request, f"Creating {target_root.absolute()} ...")
+        logging.debug(f"Creating {target_root.absolute()} ...")
         target_root.mkdir(parents = True)
 
     for relative_template in __extract_templates(template_path, rules_path):
@@ -195,14 +190,13 @@ def run(template_request: TemplateRequest):
         output_file = Path.joinpath(target_root, relative_template)
 
         if not output_file.parent.exists():
-            __info(template_request, f"Creating {output_file.parent.absolute()} ...")
+            logging.debug(f"Creating {output_file.parent.absolute()} ...")
             output_file.parent.mkdir()
 
-        __info(template_request, f"Fixing {output_file.absolute()} ...")
+        logging.debug(f"Fixing {output_file.absolute()} ...")
         for (key, replacement) in key_replacements.items():
             fixed_content = fixed_content.replace(key, replacement)
 
         output_file.write_text(fixed_content)
-    
 
-    __info(template_request, "Templating complete.")
+    logging.info("Templating complete.")

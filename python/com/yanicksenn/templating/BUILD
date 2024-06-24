@@ -8,6 +8,7 @@ py_library(
         "templating_engine.py",
     ],
     deps = [
+        "//python/com/yanicksenn/libraries/logging",
         "//python/com/yanicksenn/templating/rules",
     ]
 )

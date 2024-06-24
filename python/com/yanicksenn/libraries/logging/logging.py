@@ -3,6 +3,7 @@ from dataclasses import dataclass
 from enum import Enum
 
 class LoggingLevel(Enum):
+    DEBUG = 0
     INFO = 1
     WARNING = 2
     ERROR = 3
@@ -78,6 +79,9 @@ def __log(level: LoggingLevel, message: str):
         for peeker in __logging_config.peekers():
             peeker(logging_message)
         print(__format(logging_message))
+
+def debug(message: str):
+    __log(LoggingLevel.DEBUG, message)
 
 def info(message: str):
     __log(LoggingLevel.INFO, message)
