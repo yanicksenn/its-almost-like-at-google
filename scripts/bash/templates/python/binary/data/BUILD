@@ -6,6 +6,9 @@ py_library(
     name = "__PACKAGE_NAME-lib",
     srcs = [
         "lib.py",
+    ],
+    deps = [
+        "//python/com/yanicksenn/libraries/logging",
     ]
 )
 

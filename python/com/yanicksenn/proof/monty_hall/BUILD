@@ -6,6 +6,9 @@ py_library(
     name = "monty_hall-lib",
     srcs = [
         "lib.py",
+    ],
+    deps = [
+        "//python/com/yanicksenn/libraries/logging",
     ]
 )
 
@@ -16,5 +19,6 @@ py_binary(
     deps = [
         ":monty_hall-lib",
         "//python/com/yanicksenn/libraries/flags",
+        "//python/com/yanicksenn/libraries/logging",
     ],
 )

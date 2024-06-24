@@ -70,7 +70,7 @@ def clear_peekers():
 
 
 def __format(logging_message: LoggingMessage) -> str:
-    return f"{logging_message.level}: {logging_message.message}"
+    return f"{logging_message.level.name}: {logging_message.message}"
 
 def __log(level: LoggingLevel, message: str):
     if not is_mute() and level.value >= minimal_logging_level().value:

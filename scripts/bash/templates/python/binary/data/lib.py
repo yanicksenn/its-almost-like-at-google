@@ -1,2 +1,4 @@
+from python.com.yanicksenn.libraries.logging import logging
+
 def run(name: str):
-    print(f"Hello, {name}!")
+    logging.info(f"Hello, {name}!")

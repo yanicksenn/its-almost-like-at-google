@@ -1,4 +1,5 @@
 from enum import Enum
+from python.com.yanicksenn.libraries.logging import logging
 import random
 
 class DoorPrice(Enum):
@@ -68,10 +69,6 @@ probabilities = {
     DoorPrice.GOAT: 2
 }
 
-# TODO - yanicksenn: Put info logging into separate logging library.
-def __info(message: str):
-    print(f"INFO: {message}")
-
 def __assert_amount_of_doors_with_state(amount: int, doors: list[Door], state: DoorState):
     assert len(list(filter(lambda e: e.state() == state, doors))) == amount
 
@@ -134,9 +131,9 @@ def run(runs: int):
         if __lets_make_a_deal():
             correct += 1
     
-    __info(f"Total played: {runs}")
-    __info(f"Total correct: {correct}")
+    logging.info(f"Total played: {runs}")
+    logging.info(f"Total correct: {correct}")
 
     # This will always approach 66%
-    __info(f"Won: {(correct / runs) * 100}%")
+    logging.info(f"Won: {(correct / runs) * 100}%")
 

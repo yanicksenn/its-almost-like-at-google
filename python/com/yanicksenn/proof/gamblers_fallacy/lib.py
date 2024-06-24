@@ -1,4 +1,5 @@
 from enum import Enum
+from python.com.yanicksenn.libraries.logging import logging
 import random
 
 class Color(Enum):
@@ -11,14 +12,6 @@ probabilities = {
     Color.BLACK: 18,
     Color.GREEN: 2,
 }
-
-# TODO - yanicksenn: Put info logging into separate logging library.
-def __info(message: str):
-    print(f"INFO: {message}")
-
-# TODO - yanicksenn: Put info logging into separate logging library.
-def __warn(message: str):
-    print(f"WARNING: {message}")
 
 def __roll(probabilities: dict[Color, int]) -> tuple[Color, int]:
     slot_amount = sum(probabilities.values())
@@ -56,14 +49,14 @@ def __collect_metrics(results: list[tuple[Color, int]]):
                     played -= 1
 
         if played == 0:
-            __warn(f'No runs with twice the same color consecutively.')
+            logging.warning(f'No runs with twice the same color consecutively.')
 
         else:
-            __info(f"Total played: {played}")
-            __info(f"Total correct: {correct}")
+            logging.info(f"Total played: {played}")
+            logging.info(f"Total correct: {correct}")
 
             # This will always approach 18/38 %
-            __info(f"Won: {(correct / played) * 100}%")
+            logging.info(f"Won: {(correct / played) * 100}%")
 
 
 def run(runs: int):
