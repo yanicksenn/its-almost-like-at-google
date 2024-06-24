@@ -35,12 +35,20 @@ search_todos() {
     bazel run //python/com/yanicksenn/search/todos:todos -- --root_dir=$(__bazel_workspace) $@
 }
 
-# See /scripts/bash/templates/binary/python/README.md
+# See /scripts/bash/templates/python/binary/README.md
 create_python_binary() {
     if ! __bazel_workspace_check; then
         return 1
     fi
-    bazel run //scripts/bash/templates/binary/python:run -- $(__bazel_workspace) python/com/yanicksenn $@
+    bazel run //scripts/bash/templates/python/binary:run -- $(__bazel_workspace) python/com/yanicksenn $@
+}
+
+# See /scripts/bash/templates/python/library/README.md
+create_python_library() {
+    if ! __bazel_workspace_check; then
+        return 1
+    fi
+    bazel run //scripts/bash/templates/python/library:run -- $(__bazel_workspace) python/com/yanicksenn $@
 }
 
 # See /scripts/bash/update_license/README.md

@@ -12,7 +12,8 @@ source /Users/yanicksenn/Documents/Projects/bazel/scripts/bash/_scripts.sh
 
 - [fork_llama3](/scripts/bash/meta/llama3/README.md)
 - [search_todos](/python/com/yanicksenn/search/todos/README.md)
-- [create_python_binary](/scripts/bash/templates/binary/python/README.md)
+- [create_python_binary](/scripts/bash/templates/python/binary/README.md)
+- [create_python_library](/scripts/bash/templates/python/library/README.md)
 - [update_licence](/scripts/bash/update_license/README.md)
 
 ## Building new scripts

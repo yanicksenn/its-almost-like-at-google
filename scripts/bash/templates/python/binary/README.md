@@ -6,7 +6,7 @@ Template for a new python binary.
 
 ```bash
 # Creates new python binary my_binary in python/com/yanicksenn.
-bazel run //scripts/bash/templates/binary/python:run -- \
+bazel run //scripts/bash/templates/python/binary:run -- \
     /path/to/bazel/workspace \
     python/com/yanicksenn \
     my_binary

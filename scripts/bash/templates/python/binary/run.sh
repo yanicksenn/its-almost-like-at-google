@@ -28,7 +28,7 @@ package_root=$2
 package_name=$3
 
 package_path=$workspace_root/$package_root/$package_name
-data_root=$workspace_root/scripts/bash/templates/binary/python/data
+data_root=$workspace_root/scripts/bash/templates/python/binary/data
 rules_path=$(rlocation $data_root/RULES)
 package_root_python=${package_root////.}
 
