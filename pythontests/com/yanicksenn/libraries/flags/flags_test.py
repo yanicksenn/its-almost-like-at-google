@@ -1,5 +1,5 @@
 import unittest
-from python.com.yanicksenn.flags import flags
+from python.com.yanicksenn.libraries.flags import flags
 
 class FlagsTest(unittest.TestCase):
 

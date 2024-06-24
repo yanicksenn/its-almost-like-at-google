@@ -1,5 +1,5 @@
 import sys
-from python.com.yanicksenn.flags import flags
+from python.com.yanicksenn.libraries.flags import flags
 from python.com.yanicksenn.templating.templating_engine import TemplatePreconditionException
 from python.com.yanicksenn.templating.templating_engine import TemplateRequest
 from python.com.yanicksenn.templating.templating_engine import run

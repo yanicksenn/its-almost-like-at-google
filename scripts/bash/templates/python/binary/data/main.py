@@ -1,5 +1,5 @@
 import sys
-from python.com.yanicksenn.flags import flags
+from python.com.yanicksenn.libraries.flags import flags
 from __PACKAGE_ROOT.__PACKAGE_NAME.lib import run
 
 def main():
