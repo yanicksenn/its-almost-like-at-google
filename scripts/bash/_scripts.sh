@@ -40,7 +40,7 @@ create_python_binary() {
     if ! __bazel_workspace_check; then
         return 1
     fi
-    bazel run //scripts/bash/templates/python/binary:run -- $(__bazel_workspace) python/com/yanicksenn $@
+    bazel run //scripts/bash/templates/python/binary:run -- $(__bazel_workspace) python/com/yanicksenn/tools $@
 }
 
 # See /scripts/bash/templates/python/library/README.md
