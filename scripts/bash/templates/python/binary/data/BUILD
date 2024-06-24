@@ -15,6 +15,6 @@ py_binary(
     main = "main.py",
     deps = [
         ":__PACKAGE_NAME-lib",
-        "//python/com/yanicksenn/flags",
+        "//python/com/yanicksenn/libraries/flags",
     ],
 )

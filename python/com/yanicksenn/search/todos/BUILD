@@ -15,6 +15,6 @@ py_binary(
     main = "search_todos.py",
     deps = [
         ":todos-lib",
-        "//python/com/yanicksenn/flags",
+        "//python/com/yanicksenn/libraries/flags",
     ],
 )

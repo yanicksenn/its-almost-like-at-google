@@ -15,6 +15,6 @@ py_binary(
     main = "main.py",
     deps = [
         ":gamblers_fallacy-lib",
-        "//python/com/yanicksenn/flags",
+        "//python/com/yanicksenn/libraries/flags",
     ],
 )

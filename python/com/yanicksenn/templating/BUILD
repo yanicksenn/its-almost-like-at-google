@@ -18,6 +18,6 @@ py_binary(
     main = "templating.py",
     deps = [
         ":templating-engine",
-        "//python/com/yanicksenn/flags",
+        "//python/com/yanicksenn/libraries/flags",
     ],
 )

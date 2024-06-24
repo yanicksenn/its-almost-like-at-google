@@ -48,7 +48,7 @@ create_python_library() {
     if ! __bazel_workspace_check; then
         return 1
     fi
-    bazel run //scripts/bash/templates/python/library:run -- $(__bazel_workspace) python/com/yanicksenn $@
+    bazel run //scripts/bash/templates/python/library:run -- $(__bazel_workspace) python/com/yanicksenn/libraries $@
 }
 
 # See /scripts/bash/update_license/README.md

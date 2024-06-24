@@ -81,5 +81,5 @@ A very simple command-line flag parser.
 
 ```bash
 # Python
-//python/com/yanicksenn/flags
+//python/com/yanicksenn/libraries/flags
 ```
