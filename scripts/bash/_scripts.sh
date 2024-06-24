@@ -19,6 +19,14 @@ __bazel_workspace() {
     echo $(bazel info workspace)
 }
 
+# See /scripts/bash/meta/llama3/README.md
+fork_llama3() {
+    if ! __bazel_workspace_check; then
+        return 1
+    fi
+    bazel run //scripts/bash/meta/llama3:fork -- $(__bazel_workspace) $@
+}
+
 # See /python/com/yanicksenn/search/todos/README.md
 search_todos() {
     if ! __bazel_workspace_check; then
