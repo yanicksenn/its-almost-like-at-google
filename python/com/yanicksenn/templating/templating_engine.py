@@ -40,6 +40,7 @@ __rule_parsers: list[AbstractParser] = [
     max_length.Parser()
 ]
 
+# TODO - yanicksenn: Put info logging into separate logging library.
 def __info(template_request: TemplateRequest, message: str):
     if template_request.debug:
         print(f"INFO: {message}")

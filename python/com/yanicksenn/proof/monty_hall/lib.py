@@ -68,6 +68,7 @@ probabilities = {
     DoorPrice.GOAT: 2
 }
 
+# TODO - yanicksenn: Put info logging into separate logging library.
 def __info(message: str):
     print(f"INFO: {message}")
 

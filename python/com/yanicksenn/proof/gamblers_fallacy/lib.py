@@ -12,9 +12,11 @@ probabilities = {
     Color.GREEN: 2,
 }
 
+# TODO - yanicksenn: Put info logging into separate logging library.
 def __info(message: str):
     print(f"INFO: {message}")
 
+# TODO - yanicksenn: Put info logging into separate logging library.
 def __warn(message: str):
     print(f"WARNING: {message}")
 
