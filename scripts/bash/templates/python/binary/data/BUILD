@@ -16,5 +16,6 @@ py_binary(
     deps = [
         ":__PACKAGE_NAME-lib",
         "//python/com/yanicksenn/libraries/flags",
+        "//python/com/yanicksenn/libraries/logging",
     ],
 )
