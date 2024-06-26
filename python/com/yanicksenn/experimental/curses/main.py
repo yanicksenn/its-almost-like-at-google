@@ -1,8 +1,11 @@
+import sys
 from curses import wrapper
+from python.com.yanicksenn.libraries.flags import flags
 from python.com.yanicksenn.experimental.curses.lib import option_dialog
 from python.com.yanicksenn.experimental.curses.lib import OptionDialogConfig
 
 def main():
+    flags.parse(sys.argv)
     # TODO - yanicksenn: Text and options should be taken from the flags as well.
     config = OptionDialogConfig("Whats your favorite animal?", [
         "Cats",
