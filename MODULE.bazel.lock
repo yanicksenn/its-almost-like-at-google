@@ -377,7 +377,7 @@
     "@@rules_jvm_external~//:extensions.bzl%maven": {
       "general": {
         "bzlTransitiveDigest": "aME0tyUxYd+PGhICmzT9zEnIgZNf05hZhsfDD5v0JXM=",
-        "usagesDigest": "vonCLzX19MRjVbyAE463VxVs/BiKOk+4s3UYmsitT7Q=",
+        "usagesDigest": "wqQuIJdMSvZ2E5QXsmo+86geMolWlnP/HbrBVUFA56k=",
         "recordedFileInputs": {
           "@@rules_jvm_external~//rules_jvm_external_deps_install.json": "cafb5d2d8119391eb2b322ce3840d3352ea82d496bdb8cbd4b6779ec4d044dda"
         },
@@ -1412,6 +1412,7 @@
                 "{ \"group\": \"com.google.truth\", \"artifact\": \"truth\", \"version\": \"1.4.2\" }",
                 "{ \"group\": \"com.google.guava\", \"artifact\": \"guava\", \"version\": \"31.1-jre\" }",
                 "{ \"group\": \"com.google.inject\", \"artifact\": \"guice\", \"version\": \"7.0.0\" }",
+                "{ \"group\": \"org.xerial\", \"artifact\": \"sqlite-jdbc\", \"version\": \"3.46.0.0\" }",
                 "{ \"group\": \"com.google.android\", \"artifact\": \"annotations\", \"version\": \"4.1.1.4\" }",
                 "{ \"group\": \"com.google.api.grpc\", \"artifact\": \"proto-google-common-protos\", \"version\": \"2.29.0\" }",
                 "{ \"group\": \"com.google.auth\", \"artifact\": \"google-auth-library-credentials\", \"version\": \"1.22.0\" }",
