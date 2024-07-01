@@ -6,6 +6,6 @@ java_library(
     name = "flags",
     srcs = glob(["*.java"]),
     deps = [
-        "//java/com/yanicksenn/numbers"
+        "//java/com/yanicksenn/libraries/numbers"
     ]
 )

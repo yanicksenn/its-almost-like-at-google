@@ -6,6 +6,6 @@ java_library(
     name = "numbers",
     srcs = glob(["*.java"]),
     deps = [
-        "//java/com/yanicksenn/functions"
+        "//java/com/yanicksenn/libraries/functions"
     ]
 )

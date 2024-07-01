@@ -1,6 +1,6 @@
-package com.yanicksenn.numbers;
+package com.yanicksenn.libraries.numbers;
 
-import com.yanicksenn.functions.ThrowingSupplier;
+import com.yanicksenn.libraries.functions.ThrowingSupplier;
 import java.util.Optional;
 
 public final class Numbers {

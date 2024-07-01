@@ -1,4 +1,4 @@
-package com.yanicksenn.functions;
+package com.yanicksenn.libraries.functions;
 
 @FunctionalInterface
 public interface ThrowingSupplier<T> {

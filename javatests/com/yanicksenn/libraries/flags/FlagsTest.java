@@ -1,8 +1,8 @@
-package com.yanicksenn.flags;
+package com.yanicksenn.libraries.flags;
 
 import static com.google.common.truth.Truth.assertThat;
 
-import com.yanicksenn.flags.Flags;
+import com.yanicksenn.libraries.flags.Flags;
 import java.util.List;
 import org.junit.Test;
 

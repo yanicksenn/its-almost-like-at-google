@@ -5,7 +5,7 @@ java_binary(
     srcs = ["ClassPathLister.java"],
     main_class = "com.yanicksenn.experimental.reflection.ClassPathLister",
     deps = [
-        "//java/com/yanicksenn/flags",
+        "//java/com/yanicksenn/libraries/flags",
         "@maven//:com_google_guava_guava",
     ],
 )

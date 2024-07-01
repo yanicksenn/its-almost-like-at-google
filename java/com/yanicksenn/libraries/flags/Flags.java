@@ -1,6 +1,6 @@
-package com.yanicksenn.flags;
+package com.yanicksenn.libraries.flags;
 
-import com.yanicksenn.numbers.Numbers;
+import com.yanicksenn.libraries.numbers.Numbers;
 import java.lang.Enum;
 import java.util.HashMap;
 import java.util.Objects;

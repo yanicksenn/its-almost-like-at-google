@@ -76,7 +76,7 @@ A very simple command-line flag parser.
 
 ```bash
 # Java
-//java/com/yanicksenn/flags
+//java/com/yanicksenn/libraries/flags
 ```
 
 ```bash

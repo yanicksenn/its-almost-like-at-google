@@ -1,6 +1,6 @@
 package com.yanicksenn.helloworld;
 
-import com.yanicksenn.flags.Flags;
+import com.yanicksenn.libraries.flags.Flags;
 
 public final class HelloWorld {
     public static void main(String[] args) {

@@ -1,4 +1,4 @@
-package com.yanicksenn.numbers;
+package com.yanicksenn.libraries.numbers;
 
 import static com.google.common.truth.Truth.assertThat;
 
