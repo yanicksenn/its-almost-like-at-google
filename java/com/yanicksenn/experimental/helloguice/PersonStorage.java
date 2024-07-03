@@ -1,9 +1,9 @@
-package com.yanicksenn.helloguice;
+package com.yanicksenn.experimental.helloguice;
 
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
-import com.yanicksenn.helloguice.proto.Person;
-import com.yanicksenn.helloguice.proto.Person.Id;
+import com.yanicksenn.experimental.helloguice.proto.Person;
+import com.yanicksenn.experimental.helloguice.proto.Person.Id;
 import java.util.List;
 import java.util.stream.Collectors;
 

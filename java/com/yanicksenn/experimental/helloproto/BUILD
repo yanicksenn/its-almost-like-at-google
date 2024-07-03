@@ -22,6 +22,6 @@ java_library(
 
 java_binary(
     name = "helloproto",
-    main_class = "com.yanicksenn.helloproto.HelloProto",
+    main_class = "com.yanicksenn.experimental.helloproto.HelloProto",
     runtime_deps = [":helloproto-lib"],
 )

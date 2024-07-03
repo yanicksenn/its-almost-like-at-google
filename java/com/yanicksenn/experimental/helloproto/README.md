@@ -5,7 +5,7 @@ Simple program using java, bazel and protobuf.
 ## Run
 
 ```
-% bazel run //java/com/yanicksenn/helloproto
+% bazel run //java/com/yanicksenn/experimental/helloproto
 name: "Payload"
 timestamp: 1716664411389
 data: "Lorem ipsum dolor sit amet"

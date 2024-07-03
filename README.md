@@ -22,33 +22,33 @@ source "$__BAZEL_ROOT/source_me.sh"
 relink
 ```
 
+## Experimental
+
+- [Java](java/com/yanicksenn/experimental)
+- [Python](python/com/yanicksenn/experimental)
+
+## Libraries
+
+- [Java](java/com/yanicksenn/libraries)
+- [Python](python/com/yanicksenn/libraries)
+
+### Flags
+
+A very simple command-line flag parser.
+
+```bash
+# Java
+//java/com/yanicksenn/libraries/flags
+```
+
+```bash
+# Python
+//python/com/yanicksenn/libraries/flags
+```
+
 ## Binaries
 
 List of binaries present in this mono repo.
-
-### Hello, World!
-```bash
-bazel run //java/com/yanicksenn/helloworld -- --name=Yanick
-```
-
-### Hello, Proto!
-```bash
-bazel run //java/com/yanicksenn/helloproto
-```
-
-### Hello, Guice!
-```bash
-bazel run //java/com/yanicksenn/helloguice
-```
-
-### Hello, gRPC!
-```bash
-# Server
-bazel run //java/com/yanicksenn/hellogrpc:hello_service_server
-
-# Client
-bazel run //java/com/yanicksenn/hellogrpc:hello_service_client
-```
 
 ### Templating
 
@@ -67,19 +67,3 @@ See [docs](/python/com/yanicksenn/tools/todos/README.md).
 Proofs and thought experiments such as the Gambler's Fallacy and Monty Hall.
 
 See [docs](/python/com/yanicksenn/proof/README.md).
-
-## Libraries
-
-### Flags
-
-A very simple command-line flag parser.
-
-```bash
-# Java
-//java/com/yanicksenn/libraries/flags
-```
-
-```bash
-# Python
-//python/com/yanicksenn/libraries/flags
-```

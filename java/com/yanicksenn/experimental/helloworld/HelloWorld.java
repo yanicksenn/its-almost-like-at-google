@@ -1,4 +1,4 @@
-package com.yanicksenn.helloworld;
+package com.yanicksenn.experimental.helloworld;
 
 import com.yanicksenn.libraries.flags.Flags;
 

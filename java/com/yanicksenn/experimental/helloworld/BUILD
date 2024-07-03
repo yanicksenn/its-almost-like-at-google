@@ -8,6 +8,6 @@ java_library(
 
 java_binary(
     name = "helloworld",
-    main_class = "com.yanicksenn.helloworld.HelloWorld",
+    main_class = "com.yanicksenn.experimental.helloworld.HelloWorld",
     runtime_deps = [":helloworld-lib"],
 )

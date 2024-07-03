@@ -1,4 +1,4 @@
-package com.yanicksenn.helloguice;
+package com.yanicksenn.experimental.helloguice;
 
 import com.google.protobuf.Message;
 import java.util.ArrayList;

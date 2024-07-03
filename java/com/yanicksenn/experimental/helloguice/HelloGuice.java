@@ -1,9 +1,9 @@
-package com.yanicksenn.helloguice;
+package com.yanicksenn.experimental.helloguice;
 
 import com.google.inject.Inject;
-import com.yanicksenn.helloguice.proto.Date;
-import com.yanicksenn.helloguice.proto.Person;
-import com.yanicksenn.helloguice.proto.Person.Id;
+import com.yanicksenn.experimental.helloguice.proto.Date;
+import com.yanicksenn.experimental.helloguice.proto.Person;
+import com.yanicksenn.experimental.helloguice.proto.Person.Id;
 import java.lang.Runnable;
 import java.util.UUID;
 
@@ -26,6 +26,7 @@ public final class HelloGuice implements Runnable {
                 .setLastname("Senn")
                 .setBirthday(Date.newBuilder().setYear(1997).setMonth(4).setDay(11))
                 .build());
+        System.out.println("Execution complete.");
     }
 
     private static String createUUID() {

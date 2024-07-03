@@ -1,4 +1,4 @@
-package com.yanicksenn.helloguice;
+package com.yanicksenn.experimental.helloguice;
 
 import com.google.inject.AbstractModule;
 import com.google.inject.Guice;

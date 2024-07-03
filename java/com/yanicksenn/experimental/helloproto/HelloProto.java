@@ -1,8 +1,8 @@
-package com.yanicksenn.helloproto;
+package com.yanicksenn.experimental.helloproto;
 
 import com.google.common.collect.ImmutableList;
-import com.yanicksenn.helloproto.proto.Payload;
-import com.yanicksenn.helloproto.proto.Payload.Flag;
+import com.yanicksenn.experimental.helloproto.proto.Payload;
+import com.yanicksenn.experimental.helloproto.proto.Payload.Flag;
 
 public final class HelloProto {
   public static void main(String[] args) {

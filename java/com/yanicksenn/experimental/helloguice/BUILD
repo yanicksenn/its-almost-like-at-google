@@ -16,7 +16,7 @@ java_library(
 
 java_binary(
     name = "helloguice",
-    main_class = "com.yanicksenn.helloguice.HelloGuiceLauncher",
+    main_class = "com.yanicksenn.experimental.helloguice.HelloGuiceLauncher",
     runtime_deps = [":helloguice-lib"],
 )
 
