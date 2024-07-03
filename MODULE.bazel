@@ -13,7 +13,7 @@ maven.install(
         "com.google.truth:truth:1.4.2",
         "com.google.guava:guava:31.1-jre",
         "com.google.inject:guice:7.0.0",
-        "org.xerial:sqlite-jdbc:3.46.0.0"
+        "org.xerial:sqlite-jdbc:3.46.0.0",
     ],
     fetch_sources = True,
     repositories = [
@@ -26,5 +26,5 @@ maven.install(
 use_repo(maven, "maven")
 
 register_toolchains(
-    "//toolchains:py_toolchain"
+    "//toolchains:py_toolchain",
 )
