@@ -5,15 +5,28 @@ bazel_dep(name = "rules_jvm_external", version = "6.0")
 bazel_dep(name = "rules_proto", version = "6.0.0")
 bazel_dep(name = "protobuf", version = "27.1")
 
+ARTIFACTS_GOOGLE = [
+    "com.google.truth:truth:1.4.2",
+    "com.google.guava:guava:31.1-jre",
+    "com.google.inject:guice:7.0.0"
+]
+
+ARTIFACTS_JMONKEYENGINE = [
+    "org.jmonkeyengine:jme3-core:3.3.2-stable",
+    "org.jmonkeyengine:jme3-desktop:3.3.2-stable",
+    "org.jmonkeyengine:jme3-lwjgl3:3.3.2-stable" 
+]
+
+ARTIFACTS_MISC = [
+    "junit:junit:4.12",
+    "org.xerial:sqlite-jdbc:3.46.0.0"
+]
+
+ARTIFACTS_ALL = ARTIFACTS_GOOGLE + ARTIFACTS_JMONKEYENGINE + ARTIFACTS_MISC
+
 maven = use_extension("@rules_jvm_external//:extensions.bzl", "maven")
 maven.install(
-    artifacts = [
-        "junit:junit:4.12",
-        "com.google.truth:truth:1.4.2",
-        "com.google.guava:guava:31.1-jre",
-        "com.google.inject:guice:7.0.0",
-        "org.xerial:sqlite-jdbc:3.46.0.0",
-    ],
+    artifacts = ARTIFACTS_ALL,
     fetch_sources = True,
     repositories = [
         "http://uk.maven.org/maven2",
