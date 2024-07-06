@@ -65,6 +65,14 @@ public final class Flags {
     }
   }
 
+  /**
+   * Returns true if the given toggle is enabled. A toggle is enable either when provided without a 
+   * value or explicitly setting the value to "true". Otherwise returns false.
+   */
+  public static boolean isToggled(String name) {
+    return isSet(name) && (!hasValue(name) || get(name).get().toLowerCase().equals("true"));
+  }
+
   /** Returns wether a flag with the given name is set. A flag may have no value but is set. */
   public static boolean isSet(String name) {
     Objects.requireNonNull(name);
