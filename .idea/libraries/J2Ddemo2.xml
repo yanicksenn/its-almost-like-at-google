@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="J2Ddemo2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_java~~toolchains~remotejdk21_macos/zulu-21.jdk/Contents/Home/demo/jfc/J2Ddemo/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_java~~toolchains~remotejdk21_macos/zulu-21.jdk/Contents/Home/demo/jfc/J2Ddemo/J2Ddemo.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

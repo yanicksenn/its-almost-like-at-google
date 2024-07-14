@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="functions1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/libraries/functions/libfunctions-native-header.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/libraries/functions/libfunctions-hjar.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/libraries/functions/libfunctions.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

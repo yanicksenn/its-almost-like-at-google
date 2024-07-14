@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="vaultmanager14">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/games/vaultmanager/CalendarLeapYearTest.runfiles/_main/java/com/yanicksenn/games/vaultmanager/libvaultmanager-proto-speed.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/games/vaultmanager/CalendarLeapYearTest.runfiles/_main/java/com/yanicksenn/games/vaultmanager/libvaultmanager-lib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="numbers">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/libraries/numbers/libnumbers.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/libraries/numbers/libnumbers-native-header.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/libraries/numbers/libnumbers-hjar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

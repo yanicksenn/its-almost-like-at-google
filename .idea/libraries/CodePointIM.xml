@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="CodePointIM">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_java~~toolchains~remotejdk11_macos/demo/jfc/CodePointIM/CodePointIM.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_java~~toolchains~remotejdk11_macos/demo/jfc/CodePointIM/src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

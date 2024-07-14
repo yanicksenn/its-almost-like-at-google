@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib91">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_java~~toolchains~remotejdk11_macos/zulu-11.jdk/Contents/Home/lib/jrt-fs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_java~~toolchains~remotejdk11_macos/zulu-11.jdk/Contents/Home/lib/src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

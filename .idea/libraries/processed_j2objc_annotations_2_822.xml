@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_j2objc-annotations-2.822">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloguice/helloguice.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/2.8/processed_j2objc-annotations-2.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

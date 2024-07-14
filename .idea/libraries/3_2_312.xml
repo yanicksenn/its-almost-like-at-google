@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="3.2.312">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl-jemalloc/3.2.3/processed_lwjgl-jemalloc-3.2.3-natives-windows.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl-jemalloc/3.2.3/processed_lwjgl-jemalloc-3.2.3.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl-jemalloc/3.2.3/processed_lwjgl-jemalloc-3.2.3-natives-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl-jemalloc/3.2.3/processed_lwjgl-jemalloc-3.2.3-natives-macos.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

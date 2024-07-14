@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="1.0.2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/failureaccess/1.0.2/failureaccess-1.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

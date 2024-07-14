@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_guava-33.0.0-android23">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/games/vaultmanager/vaultmanager.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/guava/33.0.0-android/processed_guava-33.0.0-android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

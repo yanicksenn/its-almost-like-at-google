@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="3.3.127">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl/3.3.1/processed_lwjgl-3.3.1-natives-linux-arm64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl/3.3.1/processed_lwjgl-3.3.1-natives-linux.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl/3.3.1/processed_lwjgl-3.3.1-natives-macos-arm64.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl/3.3.1/processed_lwjgl-3.3.1-natives-windows.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl/3.3.1/processed_lwjgl-3.3.1-natives-linux-arm32.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl/3.3.1/processed_lwjgl-3.3.1-natives-windows-x86.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl/3.3.1/processed_lwjgl-3.3.1.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl/3.3.1/processed_lwjgl-3.3.1-natives-macos.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

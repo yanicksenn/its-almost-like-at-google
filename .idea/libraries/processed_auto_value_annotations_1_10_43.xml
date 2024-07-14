@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_auto-value-annotations-1.10.43">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/games/vaultmanager/test.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/auto/value/auto-value-annotations/1.10.4/processed_auto-value-annotations-1.10.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

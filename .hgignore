@@ -13,3 +13,8 @@ bazel-*
 
 # Personal
 source_personal.sh
+# Default ignored files
+.idea/workspace.xml
+# Project exclude paths
+.ijwb/
+.ijwb/.idea/

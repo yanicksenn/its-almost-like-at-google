@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="vaultmanager8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/games/vaultmanager/vaultmanager.runfiles/_main/java/com/yanicksenn/games/vaultmanager/vaultmanager.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/games/vaultmanager/vaultmanager.runfiles/_main/java/com/yanicksenn/games/vaultmanager/libvaultmanager-lib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/games/vaultmanager/vaultmanager.runfiles/_main/java/com/yanicksenn/games/vaultmanager/libvaultmanager-proto-speed.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

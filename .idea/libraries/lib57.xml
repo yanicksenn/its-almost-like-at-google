@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib57">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/games/vaultmanager/vaultmanager.runfiles/rules_java~~toolchains~local_jdk/lib/jrt-fs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/games/vaultmanager/vaultmanager.runfiles/rules_java~~toolchains~local_jdk/lib/src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

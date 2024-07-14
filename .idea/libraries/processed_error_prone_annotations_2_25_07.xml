@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_error_prone_annotations-2.25.07">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/games/vaultmanager/CalendarLeapYearTest.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/errorprone/error_prone_annotations/2.25.0/processed_error_prone_annotations-2.25.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

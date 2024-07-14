@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="flags2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/libraries/flags/libflags-native-header.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/libraries/flags/libflags.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/libraries/flags/libflags-hjar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

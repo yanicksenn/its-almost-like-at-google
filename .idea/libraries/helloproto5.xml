@@ -1,0 +1,16 @@
+<component name="libraryTable">
+  <library name="helloproto5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/libpayload_proto-speed.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/helloproto.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/libhelloproto-lib-native-header.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/helloproto-native-header.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/libhelloproto-lib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/libpayload_proto-speed-native-header.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/payload_proto-speed-src.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/libpayload_proto-speed-hjar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

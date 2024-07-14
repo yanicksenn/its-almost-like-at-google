@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_jakarta.inject-api-2.0.111">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/experimental/helloguice/test.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/jakarta/inject/jakarta.inject-api/2.0.1/processed_jakarta.inject-api-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_guice-7.0.02">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/experimental/helloguice/test.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/inject/guice/7.0.0/processed_guice-7.0.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

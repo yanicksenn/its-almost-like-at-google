@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="core20">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellogrpc/hello_service_server.runfiles/_main/external/protobuf~/java/core/libcore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellogrpc/hello_service_server.runfiles/_main/external/protobuf~/java/core/liblite_runtime_only.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

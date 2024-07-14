@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="2.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1-sources.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/jakarta/inject/jakarta.inject-api/2.0.1/jakarta.inject-api-2.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

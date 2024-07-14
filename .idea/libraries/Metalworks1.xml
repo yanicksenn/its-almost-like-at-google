@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="Metalworks1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_java~~toolchains~remotejdk11_macos/zulu-11.jdk/Contents/Home/demo/jfc/Metalworks/Metalworks.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/external/rules_java~~toolchains~remotejdk11_macos/zulu-11.jdk/Contents/Home/demo/jfc/Metalworks/src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

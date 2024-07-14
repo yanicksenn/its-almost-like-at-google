@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="stub">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/external/grpc-java~/stub/libstub-native-header.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/external/grpc-java~/stub/libstub-hjar.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/external/grpc-java~/stub/libstub.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib16">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/games/vaultmanager/test.runfiles/_main/external/rules_java~~toolchains~local_jdk/lib/jrt-fs.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/games/vaultmanager/test.runfiles/_main/external/rules_java~~toolchains~local_jdk/lib/src.zip!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

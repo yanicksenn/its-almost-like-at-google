@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libfunctions1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/games/vaultmanager/vaultmanager.runfiles/_main/java/com/yanicksenn/libraries/functions/libfunctions.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

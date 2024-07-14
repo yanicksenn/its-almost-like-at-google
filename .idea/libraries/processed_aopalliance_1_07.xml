@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_aopalliance-1.07">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/experimental/helloguice/test.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/aopalliance/aopalliance/1.0/processed_aopalliance-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

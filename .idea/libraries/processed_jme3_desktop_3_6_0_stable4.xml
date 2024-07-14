@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_jme3-desktop-3.6.0-stable4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/jmonkeyengine/jme3-desktop/3.6.0-stable/processed_jme3-desktop-3.6.0-stable.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

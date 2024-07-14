@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="1.10.42">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/auto/value/auto-value-annotations/1.10.4/header_auto-value-annotations-1.10.4.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/auto/value/auto-value-annotations/1.10.4/processed_auto-value-annotations-1.10.4.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

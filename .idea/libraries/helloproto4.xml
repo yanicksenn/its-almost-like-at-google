@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="helloproto4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloproto/helloproto.runfiles/_main/java/com/yanicksenn/experimental/helloproto/helloproto.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloproto/helloproto.runfiles/_main/java/com/yanicksenn/experimental/helloproto/libpayload_proto-speed.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloproto/helloproto.runfiles/_main/java/com/yanicksenn/experimental/helloproto/libhelloproto-lib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

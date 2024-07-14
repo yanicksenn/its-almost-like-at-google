@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="1.7.362">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/1.7.36/header_slf4j-api-1.7.36.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/1.7.36/processed_slf4j-api-1.7.36.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

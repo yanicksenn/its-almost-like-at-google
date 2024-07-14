@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="lib17">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/games/vaultmanager/CalendarValidationTest.runfiles/_main/external/rules_java~~toolchains~local_jdk/lib/src.zip!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/games/vaultmanager/CalendarValidationTest.runfiles/_main/external/rules_java~~toolchains~local_jdk/lib/jrt-fs.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

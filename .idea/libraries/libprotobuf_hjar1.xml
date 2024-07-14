@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libprotobuf-hjar1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/grpc-java~/protobuf/libprotobuf-hjar.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

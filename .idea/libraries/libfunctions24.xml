@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libfunctions24">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/libraries/numbers/test.runfiles/_main/java/com/yanicksenn/libraries/functions/libfunctions.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

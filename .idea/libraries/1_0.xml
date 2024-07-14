@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="1.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/aopalliance/aopalliance/1.0/header_aopalliance-1.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/aopalliance/aopalliance/1.0/processed_aopalliance-1.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

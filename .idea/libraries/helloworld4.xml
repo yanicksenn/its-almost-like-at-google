@@ -1,0 +1,12 @@
+<component name="libraryTable">
+  <library name="helloworld4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloworld/libhelloworld-lib-native-header.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloworld/libhelloworld-lib.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloworld/helloworld.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloworld/helloworld-native-header.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

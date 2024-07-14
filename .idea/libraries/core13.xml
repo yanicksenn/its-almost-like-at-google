@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="core13">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/protobuf~/java/core/libcore.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/protobuf~/java/core/liblite_runtime_only-hjar.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/protobuf~/java/core/libcore-hjar.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/protobuf~/java/core/libcore-native-header.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/protobuf~/java/core/liblite_runtime_only.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/protobuf~/java/core/liblite_runtime_only-native-header.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libapi5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellogrpc/hello_service_server.runfiles/grpc-java~/api/libapi.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

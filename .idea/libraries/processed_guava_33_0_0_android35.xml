@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_guava-33.0.0-android35">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/experimental/helloguice/test.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/guava/33.0.0-android/processed_guava-33.0.0-android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

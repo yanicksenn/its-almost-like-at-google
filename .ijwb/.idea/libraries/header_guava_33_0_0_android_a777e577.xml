@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="header_guava-33.0.0-android_a777e577">
+    <CLASSES>
+      <root url="jar:///private/var/tmp/_bazel_yanicksenn/14d85395b2081eb57bfd4a9c6bec5490/execroot/_main/bazel-out/darwin_x86_64-fastbuild/bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/guava/33.0.0-android/header_guava-33.0.0-android.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar:///private/var/tmp/_bazel_yanicksenn/14d85395b2081eb57bfd4a9c6bec5490/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/guava/guava/33.0.0-android/guava-33.0.0-android-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

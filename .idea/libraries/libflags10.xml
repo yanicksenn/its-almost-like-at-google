@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libflags10">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/_main/java/com/yanicksenn/libraries/flags/libflags.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

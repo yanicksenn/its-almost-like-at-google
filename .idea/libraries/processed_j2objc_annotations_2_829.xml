@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_j2objc-annotations-2.829">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/games/vaultmanager/CalendarLeapYearTest.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/j2objc/j2objc-annotations/2.8/processed_j2objc-annotations-2.8.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

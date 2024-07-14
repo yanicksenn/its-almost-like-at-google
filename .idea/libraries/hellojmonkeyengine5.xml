@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="hellojmonkeyengine5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine.runfiles/_main/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine.runfiles/_main/java/com/yanicksenn/experimental/hellojmonkeyengine/libhellojmonkeyengine-lib.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

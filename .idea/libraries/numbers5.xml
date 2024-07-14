@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="numbers5">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/libraries/numbers/test.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/libraries/numbers/test-native-header.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

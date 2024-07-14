@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="2.29.0">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/api/grpc/proto-google-common-protos/2.29.0/processed_proto-google-common-protos-2.29.0.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/api/grpc/proto-google-common-protos/2.29.0/header_proto-google-common-protos-2.29.0.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

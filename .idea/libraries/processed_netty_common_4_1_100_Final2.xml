@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_netty-common-4.1.100.Final2">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellogrpc/hello_service_server.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/io/netty/netty-common/4.1.100.Final/processed_netty-common-4.1.100.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

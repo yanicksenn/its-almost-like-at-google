@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_truth-1.4.233">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/games/vaultmanager/CalendarValidationTest.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/truth/truth/1.4.2/processed_truth-1.4.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

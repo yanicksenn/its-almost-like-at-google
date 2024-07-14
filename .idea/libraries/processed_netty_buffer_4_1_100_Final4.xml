@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_netty-buffer-4.1.100.Final4">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/io/netty/netty-buffer/4.1.100.Final/processed_netty-buffer-4.1.100.Final.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

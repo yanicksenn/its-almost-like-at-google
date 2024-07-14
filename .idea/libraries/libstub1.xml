@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="libstub1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellogrpc/hello_service_server.runfiles/grpc-java~/stub/libstub.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

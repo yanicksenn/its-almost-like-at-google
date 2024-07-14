@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="reader1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/sqlite/reader.runfiles/_main/java/com/yanicksenn/experimental/sqlite/reader.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

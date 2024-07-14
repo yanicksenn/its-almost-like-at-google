@@ -10,7 +10,7 @@ java_library(
         ":data_java_proto",
         "@maven//:com_google_guava_guava",
         "@maven//:com_google_inject_guice",
-        "@maven//:com_google_protobuf_protobuf_java",
+        "@protobuf//java/core",
     ],
 )
 

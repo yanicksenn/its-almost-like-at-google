@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="3.6.0-stable8">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/jmonkeyengine/jme3-desktop/3.6.0-stable/header_jme3-desktop-3.6.0-stable.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/jmonkeyengine/jme3-desktop/3.6.0-stable/processed_jme3-desktop-3.6.0-stable.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

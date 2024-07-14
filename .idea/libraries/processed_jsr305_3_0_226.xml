@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="processed_jsr305-3.0.226">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/experimental/helloguice/test.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/code/findbugs/jsr305/3.0.2/processed_jsr305-3.0.2.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

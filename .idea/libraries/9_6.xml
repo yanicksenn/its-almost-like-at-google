@@ -1,0 +1,10 @@
+<component name="libraryTable">
+  <library name="9.6">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/ow2/asm/asm/9.6/header_asm-9.6.jar!/" />
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/ow2/asm/asm/9.6/processed_asm-9.6.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

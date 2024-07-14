@@ -1,0 +1,84 @@
+syntax = "proto3";
+
+option java_multiple_files = true;
+option java_package = "com.yanicksenn.games.vaultmanager.proto";
+
+import "protos/date/data.proto";
+
+message GameResources {
+    repeated string male_firstnames = 1;
+    repeated string female_firstnames = 2;
+    repeated string lastnames = 3;
+}
+
+message Human {
+    Id id = 1;
+    Properties properties = 2;
+    States states = 3;
+
+    message Id {
+        int64 id = 1;
+    }
+
+    message Properties {
+        Date birthday = 1;
+        string firstname = 2;
+        string lastname = 3;
+        Gender gender = 4;
+
+        Id father = 5;
+        Id mother = 6;
+
+        enum Gender {
+            MALE = 0;
+            FEMALE = 1;
+        }
+    }
+
+    message States {
+        bool dead = 1;
+        Date date_of_death = 2;
+    }
+}
+
+message Operation {
+    Date date = 1;
+    oneof operation {
+        PlopOperation plop_operation = 2;
+        DeathOperation death_operation = 3;
+    }
+}
+
+message OperationResult {
+    oneof code {
+        Success success = 1;
+        Ignored ignored = 2;
+        Failed failed = 3;
+    }
+
+    message Success {
+
+    }
+
+    message Ignored {
+        string message = 1;
+    }
+
+    message Failed {
+        string message = 1;
+    }
+}
+
+message OperationLogEntry {
+    Operation operation = 1;
+    OperationResult result = 2;
+}
+
+message PlopOperation {
+    Human.Id human_id = 1;
+    Human.Properties human_properties = 2;
+}
+
+message DeathOperation {
+    Human.Id human_id = 1;
+}

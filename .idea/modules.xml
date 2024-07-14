@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/bazel.iml" filepath="$PROJECT_DIR$/bazel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bazel/bazel-bazel.iml" filepath="$PROJECT_DIR$/bazel-bazel/bazel-bazel.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/games/games.iml" filepath="$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/games/games.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/games/games1.iml" filepath="$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/games/games1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/games/games2.iml" filepath="$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/games/games2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellogrpc/hellogrpc.iml" filepath="$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellogrpc/hellogrpc.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellogrpc/hellogrpc1.iml" filepath="$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellogrpc/hellogrpc1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellogrpc/hellogrpc2.iml" filepath="$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellogrpc/hellogrpc2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloguice/helloguice.iml" filepath="$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloguice/helloguice.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloguice/helloguice1.iml" filepath="$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloguice/helloguice1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloguice/helloguice2.iml" filepath="$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloguice/helloguice2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloproto/helloproto.iml" filepath="$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloproto/helloproto.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloproto/helloproto1.iml" filepath="$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloproto/helloproto1.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/helloproto2.iml" filepath="$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/helloproto/helloproto2.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bazel/external/bazel_tools/src/java_tools/java_tools.iml" filepath="$PROJECT_DIR$/bazel-bazel/external/bazel_tools/src/java_tools/java_tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bazel/external/bazel_tools/src/tools/tools.iml" filepath="$PROJECT_DIR$/bazel-bazel/external/bazel_tools/src/tools/tools.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bazel-bazel/external/bazel_tools/tools/tools1.iml" filepath="$PROJECT_DIR$/bazel-bazel/external/bazel_tools/tools/tools1.iml" />
+    </modules>
+  </component>
+</project>

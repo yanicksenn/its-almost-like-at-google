@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Runner_deploy9">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/games/vaultmanager/CalendarTest.runfiles/_main/external/rules_java~~toolchains~remote_java_tools/java_tools/Runner_deploy.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
