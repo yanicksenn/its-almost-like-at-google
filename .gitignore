@@ -9,6 +9,7 @@ bazel-*
 
 # IntelliJ
 .idea
+.ijwb
 
 # Mercurial
 .hg

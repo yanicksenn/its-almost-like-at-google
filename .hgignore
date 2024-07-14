@@ -9,6 +9,7 @@ bazel-*
 
 # IntelliJ
 .idea
+.ijwb
 
 # Git
 .git
