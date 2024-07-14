@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="header_truth-1.4.2_32ff4d84">
-    <CLASSES>
-      <root url="jar:///private/var/tmp/_bazel_yanicksenn/14d85395b2081eb57bfd4a9c6bec5490/execroot/_main/bazel-out/darwin_x86_64-fastbuild/bin/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/com/google/truth/truth/1.4.2/header_truth-1.4.2.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

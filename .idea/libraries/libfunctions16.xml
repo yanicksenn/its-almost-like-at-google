@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="libfunctions16">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/_main/java/com/yanicksenn/libraries/functions/libfunctions.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

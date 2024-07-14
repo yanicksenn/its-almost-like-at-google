@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="CalendarValidationTest1">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/games/vaultmanager/CalendarValidationTest.runfiles/_main/javatests/com/yanicksenn/games/vaultmanager/CalendarValidationTest.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="Runner_deploy23">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/libraries/numbers/test.runfiles/rules_java~~toolchains~remote_java_tools/java_tools/Runner_deploy.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="libnumbers17">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/libraries/numbers/test.runfiles/_main/java/com/yanicksenn/libraries/numbers/libnumbers.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

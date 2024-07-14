@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="processed_JUnitParams-1.0.4">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/javatests/com/yanicksenn/games/vaultmanager/CalendarValidationTest.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/pl/pragmatists/JUnitParams/1.0.4/processed_JUnitParams-1.0.4.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

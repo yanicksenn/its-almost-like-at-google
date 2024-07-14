@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="libnetty5">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellogrpc/hello_service_server.runfiles/_main/external/grpc-java~/netty/libnetty.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

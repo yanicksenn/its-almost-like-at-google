@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="libfunctions2">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bazel/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/helloworld/helloworld.runfiles/_main/java/com/yanicksenn/libraries/functions/libfunctions.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

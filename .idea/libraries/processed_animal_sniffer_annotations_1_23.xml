@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="processed_animal-sniffer-annotations-1.23">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellogrpc/hello_service_server.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/codehaus/mojo/animal-sniffer-annotations/1.23/processed_animal-sniffer-annotations-1.23.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

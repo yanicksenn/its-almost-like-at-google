@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="libnumbers27">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/sqlite/reader.runfiles/_main/java/com/yanicksenn/libraries/numbers/libnumbers.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

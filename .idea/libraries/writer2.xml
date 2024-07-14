@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="writer2">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/sqlite/writer.runfiles/_main/java/com/yanicksenn/experimental/sqlite/writer.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

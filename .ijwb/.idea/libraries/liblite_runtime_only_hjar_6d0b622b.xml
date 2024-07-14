@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="liblite_runtime_only-hjar_6d0b622b">
-    <CLASSES>
-      <root url="jar:///private/var/tmp/_bazel_yanicksenn/14d85395b2081eb57bfd4a9c6bec5490/execroot/_main/bazel-out/darwin_x86_64-fastbuild/bin/external/protobuf~/java/core/liblite_runtime_only-hjar.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

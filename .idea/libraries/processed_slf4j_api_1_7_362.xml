@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="processed_slf4j-api-1.7.362">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/sqlite/writer.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/slf4j/slf4j-api/1.7.36/processed_slf4j-api-1.7.36.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="processed_asm-9.65">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/games/vaultmanager/CalendarTest.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/ow2/asm/asm/9.6/processed_asm-9.6.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

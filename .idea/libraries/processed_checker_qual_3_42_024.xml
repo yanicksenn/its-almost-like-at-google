@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="processed_checker-qual-3.42.024">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bin/javatests/com/yanicksenn/libraries/numbers/test.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/checkerframework/checker-qual/3.42.0/processed_checker-qual-3.42.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

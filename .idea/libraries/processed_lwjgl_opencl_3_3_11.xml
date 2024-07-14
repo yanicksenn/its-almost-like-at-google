@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="processed_lwjgl-opencl-3.3.11">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine-macos.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/lwjgl/lwjgl-opencl/3.3.1/processed_lwjgl-opencl-3.3.1.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

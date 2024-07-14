@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="libprotobuf1">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/hellogrpc/hello_service_server.runfiles/grpc-java~/protobuf/libprotobuf.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

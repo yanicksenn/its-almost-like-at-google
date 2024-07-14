@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="processed_sqlite-jdbc-3.46.0.08">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-bin/java/com/yanicksenn/experimental/sqlite/reader.runfiles/_main/external/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/xerial/sqlite-jdbc/3.46.0.0/processed_sqlite-jdbc-3.46.0.0.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>

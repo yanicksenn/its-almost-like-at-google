@@ -1,9 +1,0 @@
-<component name="libraryTable">
-  <library name="processed_jme3-lwjgl3-3.3.2-stable3">
-    <CLASSES>
-      <root url="jar://$PROJECT_DIR$/bazel-out/darwin_x86_64-fastbuild/bin/java/com/yanicksenn/experimental/hellojmonkeyengine/hellojmonkeyengine.runfiles/rules_jvm_external~~maven~maven/v1/https/jcenter.bintray.com/org/jmonkeyengine/jme3-lwjgl3/3.3.2-stable/processed_jme3-lwjgl3-3.3.2-stable.jar!/" />
-    </CLASSES>
-    <JAVADOC />
-    <SOURCES />
-  </library>
-</component>
