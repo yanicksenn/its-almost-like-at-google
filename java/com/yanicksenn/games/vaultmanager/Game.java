@@ -40,7 +40,7 @@ public class Game implements Runnable {
 
     @Override
     public void run() {
-        Date birthday = generator.getRandomDate(IntRange.of(1985, 1995));
+        Date birthday = generator.getRandomDate(IntRange.between(1985, 1995));
         Human.Id humanId = population.nextId();
         Human.Properties humanProperties = generator.getRandomHumanProperties(birthday);
 

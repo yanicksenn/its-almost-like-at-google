@@ -3,6 +3,7 @@ package com.yanicksenn.games.vaultmanager;
 import com.google.common.collect.ImmutableList;
 import com.yanicksenn.games.vaultmanager.proto.GameResources;
 import com.yanicksenn.games.vaultmanager.proto.Human;
+import com.yanicksenn.libraries.dates.Dates;
 import com.yanicksenn.libraries.ranges.IntRange;
 import com.yanicksenn.games.vaultmanager.Game.Module.Annotations.Resources;
 import com.google.inject.Inject;
@@ -76,9 +77,9 @@ public class Generator {
 
     public Date getRandomDate(IntRange yearRange) {
         Objects.requireNonNull(yearRange);
-        int year = random.between(yearRange);
-        int month = random.between(Calendar.MONTH_RANGE);
-        int day = random.between(Calendar.getDaysPerMonthRange(year, month));
+        int year = random.inRange(yearRange);
+        int month = random.inRange(Dates.Months.RANGE);
+        int day = random.between(1, Dates.getDaysOfMonth(year, month));
         return Date.newBuilder()
                 .setYear(year)
                 .setMonth(month)

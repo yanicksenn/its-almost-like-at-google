@@ -4,7 +4,7 @@ package(default_visibility = ["//visibility:public"])
 
 proto_library(
     name = "dates-proto",
-    srcs = ["data.proto"],
+    srcs = ["date.proto"],
 )
 
 java_proto_library(

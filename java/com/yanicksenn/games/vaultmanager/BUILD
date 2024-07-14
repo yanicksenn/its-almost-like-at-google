@@ -20,7 +20,7 @@ java_library(
         "//java/com/yanicksenn/libraries/flags",
         "//java/com/yanicksenn/libraries/ranges",
         "//java/com/yanicksenn/libraries/resources",
-        "//java/plugins:auto-value-processor",
+        "//java/plugins/autovalue:processor",
         "//protos/date:dates-proto-java",
         "@maven//:com_google_auto_value_auto_value",
         "@maven//:com_google_auto_value_auto_value_annotations",

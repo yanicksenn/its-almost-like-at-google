@@ -1,7 +1,7 @@
 load("@rules_java//java:defs.bzl", "java_library", "java_plugin")
 
 java_plugin(
-    name = "auto-value-plugin",
+    name = "plugin",
     generates_api = 1,
     processor_class = "com.google.auto.value.processor.AutoValueProcessor",
     deps = [
@@ -11,7 +11,7 @@ java_plugin(
 )
 
 java_library(
-    name = "auto-value-processor",
-    exported_plugins = [":auto-value-plugin"],
+    name = "processor",
+    exported_plugins = ["plugin"],
     visibility = ["//visibility:public"],
 )

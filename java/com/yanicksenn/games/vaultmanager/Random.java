@@ -21,14 +21,18 @@ public final class Random {
         if (list.isEmpty()) {
             throw new IllegalArgumentException("list must not be empty");
         }
-        return list.get(between(IntRange.of(0, list.size())));
+        return list.get(inRange(IntRange.until(0, list.size())));
     }
 
-    public int between(IntRange range) {
+    public int between(int min, int max) {
+        return inRange(IntRange.between(min, max));
+    }
+
+    public int inRange(IntRange range) {
         return range.getMinInclusive() + random.nextInt(range.getMaxExclusive() - range.getMinInclusive());
     }
 
-    public long between(LongRange range) {
+    public long inRange(LongRange range) {
         return range.getMinInclusive() + random.nextLong(range.getMaxExclusive() - range.getMinInclusive());
     }
 }

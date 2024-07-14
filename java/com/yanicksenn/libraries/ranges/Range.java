@@ -1,6 +1,7 @@
 package com.yanicksenn.libraries.ranges;
 
 import java.util.Objects;
+import java.util.stream.Stream;
 
 public abstract class Range<T extends Number> {
     private final T minInclusive;
@@ -10,6 +11,8 @@ public abstract class Range<T extends Number> {
         this.minInclusive = minInclusive;
         this.maxExclusive = maxExclusive;
     }
+
+    public abstract Stream<T> stream();
 
     public abstract boolean contains(T value);
 
