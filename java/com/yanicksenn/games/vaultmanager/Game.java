@@ -1,6 +1,5 @@
 package com.yanicksenn.games.vaultmanager;
 
-import com.google.common.collect.ImmutableSet;
 import com.google.inject.AbstractModule;
 import com.google.inject.Inject;
 import com.google.inject.Provides;
@@ -10,9 +9,9 @@ import com.yanicksenn.games.vaultmanager.proto.GameResources;
 import com.yanicksenn.games.vaultmanager.proto.Human;
 import com.yanicksenn.games.vaultmanager.proto.Operation;
 import com.yanicksenn.games.vaultmanager.proto.PlopOperation;
+import com.yanicksenn.guice.random.Random;
 import com.yanicksenn.libraries.ranges.IntRange;
 import com.yanicksenn.libraries.resources.Resource;
-import com.yanicksenn.libraries.resources.Resources;
 import com.yanicksenn.protos.Date;
 
 import java.io.IOException;
@@ -91,10 +90,6 @@ public class Game implements Runnable {
         public static final class Annotations {
             @Target({ FIELD, PARAMETER, METHOD })
             @Retention(RUNTIME)
-            public @interface Seed {}
-
-            @Target({ FIELD, PARAMETER, METHOD })
-            @Retention(RUNTIME)
             public @interface Resources {}
 
             @Target({ FIELD, PARAMETER, METHOD })
@@ -106,8 +101,13 @@ public class Game implements Runnable {
             }
         }
 
+        @Override
+        protected void configure() {
+            install(new Random.Module());
+        }
+
         @Provides
-        @Annotations.Seed
+        @Random.Annotations.InitialSeed
         public long provideGameSeed() {
             return 1234L;
         }

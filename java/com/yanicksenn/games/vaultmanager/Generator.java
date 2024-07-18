@@ -3,6 +3,7 @@ package com.yanicksenn.games.vaultmanager;
 import com.google.common.collect.ImmutableList;
 import com.yanicksenn.games.vaultmanager.proto.GameResources;
 import com.yanicksenn.games.vaultmanager.proto.Human;
+import com.yanicksenn.guice.random.Random;
 import com.yanicksenn.libraries.dates.Dates;
 import com.yanicksenn.libraries.ranges.IntRange;
 import com.yanicksenn.games.vaultmanager.Game.Module.Annotations.Resources;

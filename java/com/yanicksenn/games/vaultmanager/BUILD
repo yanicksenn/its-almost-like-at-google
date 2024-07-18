@@ -16,6 +16,7 @@ java_library(
     ],
     deps = [
         "//java/com/yanicksenn/games/vaultmanager/proto:proto-java",
+        "//java/com/yanicksenn/guice/random",
         "//java/com/yanicksenn/libraries/dates",
         "//java/com/yanicksenn/libraries/flags",
         "//java/com/yanicksenn/libraries/ranges",
