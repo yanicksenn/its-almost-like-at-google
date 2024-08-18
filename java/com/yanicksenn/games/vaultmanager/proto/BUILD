@@ -6,7 +6,7 @@ proto_library(
     name = "proto",
     srcs = ["data.proto"],
     deps = [
-        "//protos/date:dates-proto",
+        "//protos/datetime:datetime-proto",
     ],
 )
 

@@ -15,6 +15,8 @@ import static java.lang.annotation.ElementType.*;
 import static java.lang.annotation.RetentionPolicy.RUNTIME;
 
 public interface Random {
+    void setSeed(long seed);
+
     <T> T from(List<T> list);
 
     int between(int min, int max);
@@ -22,6 +24,8 @@ public interface Random {
     int inRange(IntRange range);
 
     long inRange(LongRange range);
+
+
 
     final class Module extends AbstractModule {
         @Override

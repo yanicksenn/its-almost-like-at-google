@@ -3,7 +3,7 @@ syntax = "proto3";
 option java_multiple_files = true;
 option java_package = "com.yanicksenn.games.vaultmanager.proto";
 
-import "protos/date/date.proto";
+import "protos/datetime/datetime.proto";
 
 message GameResources {
     repeated string male_firstnames = 1;

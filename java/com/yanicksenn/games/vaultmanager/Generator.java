@@ -4,7 +4,7 @@ import com.google.common.collect.ImmutableList;
 import com.yanicksenn.games.vaultmanager.proto.GameResources;
 import com.yanicksenn.games.vaultmanager.proto.Human;
 import com.yanicksenn.guice.random.Random;
-import com.yanicksenn.libraries.dates.Dates;
+import com.yanicksenn.libraries.datetime.DateTimeUtils;
 import com.yanicksenn.libraries.ranges.IntRange;
 import com.yanicksenn.games.vaultmanager.Game.Module.Annotations.Resources;
 import com.google.inject.Inject;
@@ -79,8 +79,8 @@ public class Generator {
     public Date getRandomDate(IntRange yearRange) {
         Objects.requireNonNull(yearRange);
         int year = random.inRange(yearRange);
-        int month = random.inRange(Dates.Months.RANGE);
-        int day = random.between(1, Dates.getDaysOfMonth(year, month));
+        int month = random.inRange(DateTimeUtils.MONTH_RANGE);
+        int day = random.between(1, DateTimeUtils.getDaysOfMonth(year, month));
         return Date.newBuilder()
                 .setYear(year)
                 .setMonth(month)

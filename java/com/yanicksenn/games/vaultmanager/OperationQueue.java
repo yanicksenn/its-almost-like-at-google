@@ -3,7 +3,7 @@ package com.yanicksenn.games.vaultmanager;
 import com.google.inject.Inject;
 import com.google.inject.Singleton;
 import com.yanicksenn.games.vaultmanager.proto.Operation;
-import com.yanicksenn.libraries.dates.Dates;
+import com.yanicksenn.libraries.datetime.DateTimeUtils;
 
 import java.util.Comparator;
 import java.util.Objects;
@@ -19,7 +19,7 @@ public class OperationQueue {
     OperationQueue(OperationHandlers operationHandlers) {
         this.operationHandlers = operationHandlers;
         this.queue = new PriorityQueue<>(
-            Comparator.comparing(Operation::getDate, Dates.COMPARATOR));
+            Comparator.comparing(Operation::getDate, DateTimeUtils.DATE_COMPARATOR));
     }
 
     public void enqueue(Operation operation) {

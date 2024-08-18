@@ -9,12 +9,20 @@ import java.util.Optional;
 
 @Singleton
 public final class RandomImpl implements Random {
+    private final Optional<Long> seed;
     private final java.util.Random random;
 
     @Inject
-    RandomImpl(@Annotations.InitialSeed Optional<Long> seedOptional) {
-        random = seedOptional.map(java.util.Random::new)
-            .orElse(new java.util.Random());
+    RandomImpl(@Annotations.InitialSeed Optional<Long> seed) {
+        this.seed = seed;
+        this.random = new java.util.Random();
+
+        seed.ifPresent(this::setSeed);
+    }
+
+    @Override
+    public void setSeed(long seed) {
+        random.setSeed(seed);
     }
 
     @Override

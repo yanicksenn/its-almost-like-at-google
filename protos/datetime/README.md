@@ -1,13 +1,13 @@
 # Date proto
 
-A simple proto representing gregorian dates.
+A simple proto representing gregorian dates and time.
 
 ## Usage
 
 ```build
 # In BUILD files:
-//protos/date:dates-proto
-//protos/date:dates-proto-java
+//protos/datetime:datetime-proto
+//protos/datetime:datetime-proto-java
 ```
 
 ```java
@@ -20,6 +20,6 @@ Date date = Date.newBuilder()
 ```
 
 ```protobuf
-# In proto files.
-import "protos/date/date.proto";
+// In proto files.
+import "protos/datetime/datetime.proto";
 ```

@@ -1,6 +1,6 @@
 package com.yanicksenn.games.vaultmanager;
 
-import com.yanicksenn.libraries.dates.Dates;
+import com.yanicksenn.libraries.datetime.DateTimeUtils;
 import com.yanicksenn.games.vaultmanager.Game.Module.Annotations.StartDate;
 
 import com.google.inject.Inject;
@@ -12,22 +12,17 @@ import com.yanicksenn.protos.Date;
  */
 @Singleton
 public final class Calendar {
-    private Date currentDate;
+    private final Date currentDate;
 
     @Inject
     Calendar(@StartDate Date startDate) {
-        this.currentDate = Dates.requireValid(startDate);
+        DateTimeUtils.validateDate(startDate);
+        this.currentDate = startDate;
     }
 
     public Date today() {
         return currentDate;
     }
 
-    public Date tomorrow() {
-        return Dates.getTomorrow(currentDate);
-    }
-
-    public void advance() {
-        currentDate = tomorrow();
-    }
+    // TODO: yanicksenn - Add possibility to advance the current date.
 }
