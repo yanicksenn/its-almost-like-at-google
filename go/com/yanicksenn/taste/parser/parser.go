@@ -28,12 +28,27 @@ func Parse(tokens []shared.Token) (*shared.File, error) {
 	return &file, nil
 }
 
-func parseNamespace(iterator *tokenIterator, file *shared.File) {
-	iterator.next()
+func parseNamespace(iterator *tokenIterator, file *shared.File) (error) {
+	keyword := iterator.next().Token
+	if keyword != "namespace" {
+		return errors.New(fmt.Sprint("Expected token namespace but got %s", keyword))
+	}
+
+	firstNamespace := iterator.next().Token
+	if !isValidNamespaceElement(firstNamespace) {
+		return errors.New(fmt.Sprint("Invalid namespace %s", firstNamespace))
+	}
+
+	// Repeat checking for dot and element while not read a semicolon.
+	// Check for semicolor.
 }
 
 func parseType(iterator *tokenIterator, file *shared.File) {
 	iterator.next()
+}
+
+func isValidNamespaceElement(namespaceElement string) bool {
+	return true;
 }
 
 type tokenIterator struct {
@@ -63,8 +78,7 @@ func (q *tokenIterator) next() shared.Token {
 		return q.peek()
 	}
 	
-	q.pos ++
-	return q.tokens[q.pos]
+	return q.tokens[q.pos ++]
 }
 
 func (q *tokenIterator) reset() {
