@@ -4,7 +4,8 @@ go_test(
     name = "parser",
     srcs = ["parser_test.go"],
     deps = [
-        "//go/com/yanicksenn/taste/parser"
+        "//go/com/yanicksenn/taste/parser",
+        "//go/com/yanicksenn/taste/shared"
     ],
     visibility = ["//visibility:private"],
 )
