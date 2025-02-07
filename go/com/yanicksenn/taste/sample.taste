@@ -1,0 +1,10 @@
+namespace com.yanicksenn;
+
+type PlayerState {
+	string name;
+	int64 id;
+}
+
+type GameState {
+	bool isRunning;
+}
