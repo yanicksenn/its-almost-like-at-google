@@ -17,12 +17,21 @@ type File struct {
 }
 
 type Location struct {
-	X int32
-	Y int32
+	X int
+	Y int
 }
 
 type Token struct {
 	Token string
+	Len int
+	IsValidIdentifier bool	
+	
+	// Maybe something like these fields below become useful
+	// in the future.
+	// IsNumeric bool
+	// IsAlphabetic bool
+	// IsAlphanumeric bool
+	// IsNumber bool
 	StartLocation Location
 }
 

@@ -1,33 +1,51 @@
 package parser
 
 import (
+	"reflect"
 	"testing"
+
 	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/parser"
 	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/shared"
+	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/tokenizer"
 )
 
 func TestParse(t *testing.T) {
-	tokens := []shared.Token {
-		{ Token: "namespace" },
-		{ Token: "Tokenizer" },
-		{ Token: "." },
-		{ Token: "Test" },
-		{ Token: ";" },
-		{ Token: "type" },
-		{ Token: "Token" },
-		{ Token: "{" },
-		{ Token: "string" },
-		{ Token: "value" },
-		{ Token: ";" },
-		{ Token: "int" },
-		{ Token: "counter" },
-		{ Token: ";" },
-		{ Token: "}" },
-	}
+	content := `
 
-	file, err := parser.Parse(tokens)
+namespace Tokenizer.Test;
+
+type Token {
+	string value;
+	int counter;
+}
+
+	`
+	actualFile, err := parser.Parse(tokenizer.Tokenize(content))
 	if err != nil {
 		t.Fatalf("%w", err)
 	}
-	t.Fatalf("%+v\n", file)
+	expectedFile := shared.File{
+		Namespace: "Tokenizer.Test",
+		Types: []shared.Type{
+			{
+				Name: "Token",
+				Fields: []shared.Field{
+					{
+						Name: "value",
+						Type: "string",
+						IsArray: false,
+					},
+					{
+						Name: "counter",
+						Type: "int",
+						IsArray: false,
+					},
+				},
+			},
+		},
+
+	}
+	if reflect.DeepEqual(expectedFile, actualFile) {
+		
+	}		
 }

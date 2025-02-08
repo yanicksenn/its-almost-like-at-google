@@ -21,21 +21,156 @@ type Token {
 	`)
 
 	expectedTokens := []shared.Token {
-		{ Token: "namespace" },
-		{ Token: "Tokenizer" },
-		{ Token: "." },
-		{ Token: "Test" },
-		{ Token: ";" },
-		{ Token: "type" },
-		{ Token: "Token" },
-		{ Token: "{" },
-		{ Token: "string" },
-		{ Token: "value" },
-		{ Token: ";" },
-		{ Token: "int" },
-		{ Token: "counter" },
-		{ Token: ";" },
-		{ Token: "}" },
+		{ 
+			Token: "namespace", 
+			Len: 9,
+			IsValidIdentifier: true,
+			StartLocation: shared.Location{ 
+				X: 0, 
+				Y: 2, 
+			},
+		},
+		{
+			Token: "Tokenizer", 
+			Len: 9,
+			IsValidIdentifier: true,
+			StartLocation: shared.Location{ 
+				X: 10, 
+				Y: 2, 
+			},
+
+		},
+		{ 
+			Token: ".", 
+			Len: 1,
+			IsValidIdentifier: false,
+			StartLocation: shared.Location{ 
+				X: 19, 
+				Y: 2, 
+			},
+
+		},
+		{ 
+			Token: "Test", 
+			Len: 4,
+			IsValidIdentifier: true,
+			StartLocation: shared.Location{ 
+				X: 20, 
+				Y: 2, 
+			},
+
+		},
+		{ 
+			Token: ";", 
+			Len: 1,
+			IsValidIdentifier: false,
+			StartLocation: shared.Location{ 
+				X: 24, 
+				Y: 2, 
+			},
+
+		},
+		{ 
+			Token: "type", 
+			Len: 4,
+			IsValidIdentifier: true,
+			StartLocation: shared.Location{ 
+				X: 0, 
+				Y: 4, 
+			},
+ 
+		},
+		{ 
+			Token: "Token", 
+			Len: 5,
+			IsValidIdentifier: true,
+			StartLocation: shared.Location{ 
+				X: 5, 
+				Y: 4, 
+			},
+ 
+		},
+		{ 
+			Token: "{", 
+			Len: 1,
+			IsValidIdentifier: false,
+			StartLocation: shared.Location{ 
+				X: 11, 
+				Y: 4, 
+			},
+ 
+		},
+		{ 
+			Token: "string", 
+			Len: 6,
+			IsValidIdentifier: true,
+			StartLocation: shared.Location{ 
+				X: 1, 
+				Y: 5, 
+			},
+
+		},
+		{ 
+			Token: "value", 
+			Len: 5,
+			IsValidIdentifier: true,
+			StartLocation: shared.Location{ 
+				X: 8, 
+				Y: 5, 
+			},
+
+		},
+		{ 
+			Token: ";", 
+			Len: 1,
+			IsValidIdentifier: false,
+			StartLocation: shared.Location{ 
+				X: 13, 
+				Y: 5, 
+			},
+
+		},
+		{ 
+
+			Token: "int", 
+			Len: 3,
+			IsValidIdentifier: true,
+			StartLocation: shared.Location{ 
+				X: 1, 
+				Y: 6, 
+			},
+
+		},
+		{ 
+			Token: "counter", 
+			Len: 7,
+			IsValidIdentifier: true,
+			StartLocation: shared.Location{ 
+				X: 5, 
+				Y: 6, 
+			},
+ 
+		},
+		{ 
+			Token: ";", 
+			Len: 1,
+			IsValidIdentifier: false,
+			StartLocation: shared.Location{ 
+				X: 12, 
+				Y: 6, 
+			},
+
+		},
+		{ 
+			Token: "}", 
+			Len: 1,
+			IsValidIdentifier: false,
+			StartLocation: shared.Location{ 
+				X: 0, 
+				Y: 7, 
+			},
+
+		},
 
 	}
 

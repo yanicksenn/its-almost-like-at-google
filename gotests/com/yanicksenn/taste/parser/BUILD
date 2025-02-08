@@ -5,7 +5,8 @@ go_test(
     srcs = ["parser_test.go"],
     deps = [
         "//go/com/yanicksenn/taste/parser",
-        "//go/com/yanicksenn/taste/shared"
+        "//go/com/yanicksenn/taste/shared",
+        "//go/com/yanicksenn/taste/tokenizer"
     ],
     visibility = ["//visibility:private"],
 )
