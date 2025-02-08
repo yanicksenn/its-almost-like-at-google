@@ -17,7 +17,7 @@ Add the following lines to your preferred shell .rc file:
 
 ```bash
 # E.g. ~/.zshrc
-__BAZEL_ROOT=/Users/yanicksenn/Documents/Projects/bazel
+__BAZEL_ROOT=$USER/Work
 source "$__BAZEL_ROOT/source_me.sh"
 relink
 ```
