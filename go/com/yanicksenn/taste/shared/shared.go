@@ -35,3 +35,7 @@ type Token struct {
 	StartLocation Location
 }
 
+type Recipe struct {
+	Content string
+}
+

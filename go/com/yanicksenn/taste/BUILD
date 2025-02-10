@@ -6,7 +6,8 @@ go_binary(
     deps = [
 	"//go/com/yanicksenn/taste/parser",
 	"//go/com/yanicksenn/taste/shared",
-    	"//go/com/yanicksenn/taste/tokenizer"
+    	"//go/com/yanicksenn/taste/tokenizer",
+    	"//go/com/yanicksenn/taste/writer"
     ]
 
 )
