@@ -4,9 +4,9 @@ import (
 	"reflect"
 	"testing"
 
-	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/parser"
 	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/shared"
-	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/tokenizer"
+	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/taste_parser"
+	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/taste_tokenizer"
 )
 
 func TestParse(t *testing.T) {
@@ -20,7 +20,7 @@ type Token {
 }
 
 	`
-	actualFile, err := parser.Parse(tokenizer.Tokenize(content))
+	actualFile, err := taste_parser.Parse(taste_tokenizer.Tokenize(content))
 	if err != nil {
 		t.Fatalf("%w", err)
 	}

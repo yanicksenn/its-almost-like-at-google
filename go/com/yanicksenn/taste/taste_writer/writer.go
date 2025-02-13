@@ -1,4 +1,4 @@
-package writer
+package taste_writer
 
 import (
 	"errors"

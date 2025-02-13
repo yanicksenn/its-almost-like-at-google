@@ -1,60 +1,72 @@
 package main
 
 import (
+	"errors"
+	"flag"
 	"fmt"
 	"os"
 	"path/filepath"
 
-	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/parser"
 	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/shared"
-	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/tokenizer"
-	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/writer"
+	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/taste_parser"
+	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/taste_tokenizer"
+	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/taste_writer"
 )
 
+var tasteFileFlag string
+var recipeFileFlag string
+
 func main() {
-	cwd, err := os.Getwd()
-	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+	flag.StringVar(&tasteFileFlag, "taste", "", "Path to the taste file.")
+	flag.StringVar(&recipeFileFlag, "recipe", "", "Path to the recipe file.")
+	flag.Parse()
+
+	if len(tasteFileFlag) == 0 {
+		fmt.Fprintln(os.Stderr, errors.New("Flag taste not set"))
 		os.Exit(1)
 	}
 
-	tasteFile, err := getTasteFileContent(cwd)
+	tasteFile, err := read(tasteFileFlag)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(2)
 	}
-	
-	recipeFile, err := getRecipeFileContent(cwd)
-	if err != nil {
-		fmt.Fprintln(os.Stderr, err)
+
+	if len(recipeFileFlag) == 0 {
+		fmt.Fprintln(os.Stderr, errors.New("Flag recipe not set"))
 		os.Exit(3)
 	}
 
-	tokens := tokenizer.Tokenize(tasteFile)
-	file, err := parser.Parse(tokens)
+	recipeFile, err := read(recipeFileFlag)
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
 		os.Exit(4)
+	}
+
+	tokens := taste_tokenizer.Tokenize(tasteFile)
+	file, err := taste_parser.Parse(tokens)
+	if err != nil {
+		fmt.Fprintln(os.Stderr, err)
+		os.Exit(5)
 	}
 
 	recipe := shared.Recipe{
 		Content: recipeFile,
 	}
-	err = writer.Write(file, &recipe, "bogus")
+	err = taste_writer.Write(file, &recipe, "bogus")
 	if err != nil {
 		fmt.Fprintln(os.Stderr, err)
-		os.Exit(4)
+		os.Exit(6)
 	}
 }
 
-func getTasteFileContent(cwd string) (string, error) {
-	tasteFilePath := filepath.Join(cwd, os.Args[1])
-	tasteFileBytes, err := os.ReadFile(tasteFilePath)
+func read(path string) (string, error) {
+	content, err := os.ReadFile(path)
 	if err != nil {
-		return "", nil
+		return "", err
 	}
 
-	return string(tasteFileBytes), nil
+	return string(content), nil
 }
 
 func getRecipeFileContent(cwd string) (string, error) {

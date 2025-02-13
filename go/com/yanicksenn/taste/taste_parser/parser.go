@@ -1,4 +1,4 @@
-package parser
+package taste_parser
 
 import (
 	"errors"

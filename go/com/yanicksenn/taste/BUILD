@@ -4,10 +4,10 @@ go_binary(
     name = "main",
     srcs = ["main.go"],
     deps = [
-	"//go/com/yanicksenn/taste/parser",
 	"//go/com/yanicksenn/taste/shared",
-    	"//go/com/yanicksenn/taste/tokenizer",
-    	"//go/com/yanicksenn/taste/writer"
+	"//go/com/yanicksenn/taste/taste_parser",
+    	"//go/com/yanicksenn/taste/taste_tokenizer",
+    	"//go/com/yanicksenn/taste/taste_writer"
     ]
 
 )

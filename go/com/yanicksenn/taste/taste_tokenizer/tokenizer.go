@@ -1,4 +1,4 @@
-package tokenizer
+package taste_tokenizer
 
 import (
 	"strings"

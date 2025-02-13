@@ -5,11 +5,11 @@ import (
 	"testing"
 
 	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/shared"
-	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/tokenizer"
+	"github.com/yanicksenn/its-almost-like-at-google/go/com/yanicksenn/taste/taste_tokenizer"
 )
 
 func TestTokenize(t *testing.T) {
-	actualTokens := tokenizer.Tokenize(`
+	actualTokens := taste_tokenizer.Tokenize(`
 
 namespace Tokenizer.Test;
 
